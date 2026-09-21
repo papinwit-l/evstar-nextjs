@@ -21,9 +21,10 @@ const styles = {
   hero: {
     section:
       "bg-surface min-h-[calc(100svh-var(--header-height)-12px)] max-h-[900px]",
-    title: "text-[clamp(2.5rem,6.4vw,4.4rem)] tracking-[-0.025em] max-w-[13ch]",
-    subtitle: "text-[clamp(1.1rem,2vw,1.6rem)] max-w-[30ch]",
-    image: "max-h-[min(48vh,500px)]",
+    // Min size keeps the longest nowrap phrase inside a 375px screen
+    title: "text-[clamp(1.7rem,5.6vw,4rem)] tracking-[-0.025em] max-w-[16ch]",
+    subtitle: "text-[clamp(1.05rem,1.8vw,1.4rem)] max-w-[34ch] text-text-muted",
+    image: "max-h-[min(44vh,460px)]",
   },
   dark: {
     section: "bg-black text-surface-dim",
@@ -76,7 +77,7 @@ export function ProductTile({
       </Heading>
 
       <p className={cn("mt-2 leading-[1.35] text-balance", s.subtitle)}>
-        {data.subtitle}
+        <Phrases text={data.subtitle} />
       </p>
 
       <div className="mt-[22px] flex flex-wrap justify-center gap-3.5">
