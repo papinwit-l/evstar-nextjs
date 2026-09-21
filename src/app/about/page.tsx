@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AboutHero } from "@/components/about/AboutHero";
 import { CapabilitiesSection } from "@/components/about/CapabilitiesSection";
+import { MilestonesSection } from "@/components/about/MilestonesSection";
 import { StorySection } from "@/components/about/StorySection";
 import { StatsSection } from "@/components/about/StatsSection";
 import { getAboutPage } from "@/lib/api/about";
@@ -20,7 +21,8 @@ export default async function AboutPage() {
       <StatsSection items={about.stats} />
       <StorySection data={about.story} />
       <CapabilitiesSection data={about.capabilities} />
-      {/* next: milestones, standards, cta */}
+      <MilestonesSection data={about.milestones} />
+      {/* next: standards, cta */}
     </>
   );
 }

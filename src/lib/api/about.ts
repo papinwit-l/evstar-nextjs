@@ -2,6 +2,7 @@ import { cache } from "react";
 import {
   aboutCapabilities,
   aboutHero,
+  aboutMilestones,
   aboutStats,
   aboutStory,
 } from "@/lib/mock/about";
@@ -14,5 +15,6 @@ export const getAboutPage = cache(async (): Promise<AboutPageData> => {
     stats: aboutStats,
     story: aboutStory,
     capabilities: aboutCapabilities,
+    milestones: aboutMilestones,
   };
 });

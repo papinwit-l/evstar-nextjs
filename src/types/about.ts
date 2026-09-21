@@ -25,7 +25,8 @@ export type AboutPageData = {
   stats: Stat[];
   story: StoryData;
   capabilities: CapabilitiesData;
-  // milestones, standards, cta … added section by section
+  milestones: MilestonesData;
+  // standards, cta … added section by section
 };
 
 export type StoryData = {
@@ -50,4 +51,16 @@ export type CapabilitiesData = {
   lead?: string;
   /** Designed for 3 cards */
   items: Capability[];
+};
+
+export type Milestone = {
+  year: string;
+  title: string;
+  body?: string;
+};
+
+export type MilestonesData = {
+  title: string;
+  /** Oldest first. 4 per row on desktop; more items wrap to a new row */
+  items: Milestone[];
 };

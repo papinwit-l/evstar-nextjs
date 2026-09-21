@@ -1,6 +1,7 @@
 import type {
   AboutHeroData,
   CapabilitiesData,
+  MilestonesData,
   Stat,
   StoryData,
 } from "@/types/about";
@@ -48,6 +49,21 @@ export const aboutCapabilities: CapabilitiesData = {
     {
       title: "ติดตั้งและดูแล",
       body: "ทีมช่างทั่วประเทศ รับประกัน 3 ปี และดูแลหลังการขายตลอดอายุการใช้งาน",
+    },
+  ],
+};
+
+// TODO: every year and event is an example structure — replace with the client's history
+export const aboutMilestones: MilestonesData = {
+  title: "เส้นทางของเรา",
+  items: [
+    { year: "XXXX", title: "ก่อตั้งบริษัท", body: "[รายละเอียด]" },
+    { year: "XXXX", title: "เริ่มรับผลิตแบบ OEM", body: "[รายละเอียด]" },
+    { year: "XXXX", title: "เปิดตัวเครื่องชาร์จ DC", body: "[รายละเอียด]" },
+    {
+      year: "XXXX",
+      title: "LPC ได้รับรางวัล MUSE Design Awards",
+      body: "[รายละเอียด]",
     },
   ],
 };
