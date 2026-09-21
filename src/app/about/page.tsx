@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AboutHero } from "@/components/about/AboutHero";
+import { StatsSection } from "@/components/about/StatsSection";
 import { getAboutPage } from "@/lib/api/about";
 
 export const metadata: Metadata = {
@@ -14,7 +15,8 @@ export default async function AboutPage() {
   return (
     <>
       <AboutHero data={about.hero} />
-      {/* next: stats, story, capabilities, milestones, standards, cta */}
+      <StatsSection items={about.stats} />
+      {/* next: story, capabilities, milestones, standards, cta */}
     </>
   );
 }

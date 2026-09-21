@@ -13,7 +13,15 @@ export type AboutHeroData = {
   image?: Media;
 };
 
+export type Stat = {
+  /** Big value, e.g. "240 kW" — keep it short, it never wraps */
+  value: string;
+  label: string;
+};
+
 export type AboutPageData = {
   hero: AboutHeroData;
-  // stats, story, capabilities, milestones, standards, cta … added section by section
+  /** 2–4 items; the grid adapts to the count */
+  stats: Stat[];
+  // story, capabilities, milestones, standards, cta … added section by section
 };
