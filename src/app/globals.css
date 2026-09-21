@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/*
+  EV Star — design tokens (Tailwind v4)
+
+  Guiding idea: a quiet, cool-grey canvas with ONE accent — EV orange.
+  Orange means "action or energy": CTAs, the charge line, active nav, focus.
+  If everything is orange, nothing is. Keep it under ~5% of any screen.
+
+  Contrast notes (WCAG AA = 4.5:1 for body text, 3:1 for large text/UI):
+  - accent (#f26522) on white = 3.15:1 → fills, bars, icons, text ≥ 24px only
+  - accent-text (#ca4c0c) on white = 4.61:1 → any orange text below 24px
+  - text-muted (#636368) passes on white, surface-dim and surface-deep
+*/
+
+@theme {
+  /* ─── Colors ─── */
+
+  /* Ink — dark panes, dark sections, primary nav button */
+  --color-primary: #111214;
+  --color-primary-mid: #1d1d21; /* raised card / hover on dark */
+  --color-primary-light: #3a3a40; /* borders & pill outlines on dark */
+
+  /* EV orange — CTAs, charge line, active states, focus ring */
+  --color-accent: #f26522; /* brand orange: fills, bars, underlines, large text */
+  --color-accent-hover: #ca4c0c; /* hover on accent fills */
+  --color-accent-text: #ca4c0c; /* small orange text on light bg (links, card kickers) */
+  --color-accent-on-dark: #f7843f; /* orange text on primary bg (7.4:1) */
+  --color-accent-pale: #ffe6d5; /* tags, badges, soft highlight bg */
+  --color-accent-dark: #a33a0c; /* pressed state, text on accent-pale */
+  --color-accent-subtle: rgba(242, 101, 34, 0.08); /* row/option hover tint */
+  --color-accent-border: rgba(
+    242,
+    101,
+    34,
+    0.35
+  ); /* selected card / input outline */
+
+  /* CTA — primary button. Pick ONE option, keep the others commented:
+     A) white on #ca4c0c  → passes AA, slightly deeper than logo orange (current)
+     B) white on #f26522  → matches logo, fails AA for body-size labels
+     C) ink on #f26522    → passes AA (5.9:1), brightest, less "Apple-like" */
+  --color-cta: #ca4c0c;
+  --color-cta-hover: #a33a0c;
+  --color-on-cta: #ffffff;
+
+  /* Surface — page background, panels, cards */
+  --color-surface: #ffffff; /* page bg */
+  --color-surface-dim: #f5f5f7; /* product cards, split panes, partner band */
+  --color-surface-deep: #ebebee; /* card hover */
+
+  /* Text on light backgrounds */
+  --color-text: #111214; /* headings & body */
+  --color-text-muted: #636368; /* sub-copy, descriptions, nav links */
+  --color-text-subtle: #86868b; /* placeholder, meta, disabled — not for reading text */
+
+  /* Text on dark backgrounds */
+  --color-on-primary: #ffffff;
+  --color-on-primary-muted: #a1a1a8; /* sub-copy in dark panes (7.3:1) */
+
+  /* Borders / dividers */
+  --color-border: #e3e3e6; /* hairlines, nav bottom, card outlines */
+  --color-border-strong: #c9c9cf; /* ghost buttons, inputs */
+  --color-border-hover: #a1a1a8; /* hover on bordered controls */
+
+  /* Footer */
+  --color-footer-bg: #111214;
+  --color-footer-text: #a1a1a8;
+  --color-footer-border: #3a3a40;
+
+  /* Glass nav — sticky header over content */
+  --color-nav-glass: rgba(255, 255, 255, 0.82);
+
+  /* Image overlay stops — for photo heroes / banners with text on top */
+  --color-overlay-start: rgba(17, 18, 20, 0);
+  --color-overlay-mid: rgba(17, 18, 20, 0.35);
+  --color-overlay-end: rgba(17, 18, 20, 0.8);
+
+  /* Status — forms & alerts only, never decoration */
+  --color-success: #15803d;
+  --color-warning: #b45309;
+  --color-error: #dc2626;
+
+  /* LINE brand — LINE OA contact buttons */
+  --color-line: #06c755;
+  --color-line-hover: #05b34a;
+
+  /* ─── Radius ─── */
+  --radius-card: 20px; /* product cards */
+  --radius-pane: 22px; /* big split panels */
+  --radius-box: 16px; /* logo banner, smaller containers */
+
+  /* ─── Containers (namespace → max-w-* utilities) ─── */
+  --container-page: 1280px; /* max-w-page */
+  --container-narrow: 960px; /* max-w-narrow */
+}
+
+/* ─── Fonts ───
+   next/font exposes its own variable (e.g. --font-anuphan on <html>).
+   Map it here with `inline` — referencing a variable with the same name
+   as the token (--font-body: var(--font-body)) would be circular. */
+@theme inline {
+  --font-sans:
+    var(--font-anuphan), "IBM Plex Sans Thai", "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+/* ─── Layout ───
+   Plain CSS variables (not theme tokens), used as h-(--header-height), px-(--page-px) */
+:root {
+  --header-height: 56px;
+  --section-py: clamp(4.5rem, 10vw, 8.125rem); /* 72px → 130px */
+  --band-py: clamp(3.5rem, 7vw, 6rem); /* 56px → 96px, thinner bands */
+  --page-px: clamp(1.25rem, 5vw, 4rem); /* 20px → 64px side gutter */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(
+    --header-height
+  ); /* anchor links clear the sticky header */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
