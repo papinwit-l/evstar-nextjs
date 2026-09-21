@@ -3,17 +3,10 @@
  * so the mock data can be swapped for a WPGraphQL query later.
  */
 
-export type Media = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-};
+import type { LinkField, Media } from "@/types/common";
 
-export type LinkField = {
-  label: string;
-  href: string;
-};
+// Re-exported so existing imports from "@/types/home" keep working
+export type { LinkField, Media };
 
 export type ProductTileData = {
   /** Small orange line above the title, e.g. "AC 7–22 kW" */
