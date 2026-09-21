@@ -1,4 +1,6 @@
 import { HeroSection } from "@/components/home/HeroSection";
+import { ProductGrid } from "@/components/home/ProductGrid";
+import { ProductTile } from "@/components/home/ProductTile";
 import { getHomePage, getLatestArticles } from "@/lib/api/home";
 
 export default async function HomePage() {
@@ -9,10 +11,15 @@ export default async function HomePage() {
   ]);
 
   return (
-    // Apple-style stacked tiles with a 12px gap between them
-    <div className="grid gap-3 pt-3">
-      <HeroSection data={home.hero} />
-      {/* next: dark Core 240 tile, 2×2 product grid … <ArticlesSection items={articles} /> */}
-    </div>
+    <>
+      {/* Apple-style stacked tiles with a 12px gap between them */}
+      <div className="grid gap-3 pt-3">
+        <HeroSection data={home.hero} />
+        <ProductTile data={home.featured} variant="dark" />
+        <ProductGrid items={home.grid} moreLink={home.productsLink} />
+      </div>
+
+      {/* next: compare section … <ArticlesSection items={articles} /> */}
+    </>
   );
 }

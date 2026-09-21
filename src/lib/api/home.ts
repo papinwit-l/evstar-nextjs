@@ -1,5 +1,11 @@
 import { cache } from "react";
-import { heroTile, latestArticles } from "@/lib/mock/home";
+import {
+  featuredTile,
+  gridTiles,
+  heroTile,
+  latestArticles,
+  productsLink,
+} from "@/lib/mock/home";
 import type { ArticleCard, HomePageData } from "@/types/home";
 
 /**
@@ -14,7 +20,12 @@ import type { ArticleCard, HomePageData } from "@/types/home";
 /** Home page ACF fields — one WP page, so one query. */
 export const getHomePage = cache(async (): Promise<HomePageData> => {
   // later: return wpQuery(HOME_PAGE_QUERY, { next: { tags: ["home"] } })
-  return { hero: heroTile };
+  return {
+    hero: heroTile,
+    featured: featuredTile,
+    grid: gridTiles,
+    productsLink,
+  };
 });
 
 /** Latest posts — a separate WP query, independent of the home page fields. */

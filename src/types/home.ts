@@ -29,7 +29,13 @@ export type ProductTileData = {
 /** Everything the home page reads from its own WP page (ACF fields). */
 export type HomePageData = {
   hero: ProductTileData;
-  // featured, grid, compare, highlights, oem … added section by section
+  /** Black full-width tile under the hero */
+  featured: ProductTileData;
+  /** 2×2 grid; keep an even count so the grid has no gap */
+  grid: ProductTileData[];
+  /** Link under the grid, e.g. "ดูสินค้าทั้งหมด 7 รุ่น" */
+  productsLink: LinkField;
+  // compare, highlights, oem … added section by section
 };
 
 /** Article card; will come from WP posts, not from the home page fields. */
