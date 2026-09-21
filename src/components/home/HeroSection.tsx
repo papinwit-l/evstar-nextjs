@@ -1,11 +1,11 @@
 import { ChargeLine } from "@/components/home/ChargeLine";
 import { ProductTile } from "@/components/home/ProductTile";
-import type { ProductTileData } from "@/types/home";
+import type { HeroData } from "@/types/home";
 
-export function HeroSection({ data }: { data: ProductTileData }) {
+export function HeroSection({ data }: { data: HeroData }) {
   return (
     <ProductTile data={data} variant="hero">
-      <ChargeLine />
+      {data.chargeLine && <ChargeLine {...data.chargeLine} />}
     </ProductTile>
   );
 }

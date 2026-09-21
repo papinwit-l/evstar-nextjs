@@ -13,6 +13,7 @@ export type ProductTileData = {
   kicker?: string;
   /** Line breaks ("\n", from an ACF textarea) mark where Thai phrases may wrap */
   title: string;
+  /** Same "\n" phrase breaks as the title */
   subtitle: string;
   image: Media;
   primary: LinkField;
@@ -20,8 +21,20 @@ export type ProductTileData = {
 };
 
 /** Everything the home page reads from its own WP page (ACF fields). */
+export type ChargeLineData = {
+  label: string;
+  /** Bold part on the right, e.g. "7 – 240 kW" */
+  value: string;
+  detail?: string;
+};
+
+/** Hero = a product tile with an h1, plus the animated charge line */
+export type HeroData = ProductTileData & {
+  chargeLine?: ChargeLineData;
+};
+
 export type HomePageData = {
-  hero: ProductTileData;
+  hero: HeroData;
   /** Black full-width tile under the hero */
   featured: ProductTileData;
   /** 2×2 grid; keep an even count so the grid has no gap */

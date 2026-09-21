@@ -2,6 +2,7 @@ import type {
   ArticleCard,
   CompareData,
   FinalCtaData,
+  HeroData,
   HighlightsData,
   LinkField,
   OemData,
@@ -12,17 +13,22 @@ import type {
 // Later these come from the WordPress media library (URL + real width/height).
 const IMG = "/images/products";
 
-export const heroTile: ProductTileData = {
-  title: "ชาร์จที่บ้าน\nได้ตั้งแต่คืนนี้",
-  subtitle: "AC006 เครื่องชาร์จติดผนัง 7–22 kW ควบคุมผ่านแอป",
+export const heroTile: HeroData = {
+  kicker: "EVSTAR SOLUTIONS × ChargeCore",
+  title: "ตัวแทนจำหน่ายและติดตั้ง\nสถานีชาร์จ ChargeCore\nอย่างเป็นทางการ",
+  subtitle:
+    "บริการครบวงจร\nตั้งแต่บ้านพักอาศัย\nถึงสถานีชาร์จเชิงพาณิชย์\nได้มาตรฐาน CE และ TÜV",
+  // TODO: a line-up or installation photo from ChargeCore's assets would suit better
+  // than repeating AC006, which also has its own tile below
   image: {
     src: `${IMG}/ac006.png`,
-    alt: "AC006 Smart AC EV Home Charger",
+    alt: "เครื่องชาร์จ ChargeCore AC006",
     width: 800,
     height: 1000,
   },
-  primary: { label: "ดูเพิ่มเติม", href: "/products/ac006" },
-  secondary: { label: "นัดสำรวจหน้างาน", href: "/contact?topic=install" },
+  primary: { label: "ขอใบเสนอราคาติดตั้ง", href: "/quote" },
+  secondary: { label: "ดูรุ่นสินค้า ChargeCore", href: "/products" },
+  chargeLine: { label: "AC และ DC", value: "7 – 240 kW" },
 };
 
 export const featuredTile: ProductTileData = {
