@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Fragment, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Button } from "@/components/shared/Button";
+import { Phrases } from "@/components/shared/Phrases";
 import { cn } from "@/lib/utils";
 import type { ProductTileData } from "@/types/home";
 
@@ -38,20 +39,6 @@ const styles = {
   },
 };
 
-/**
- * Splits "line one\nline two" into phrases that never break internally.
- * The space goes BETWEEN the spans — inside a nowrap span it would not be
- * a break opportunity, and the whole title would overflow as one line.
- */
-function Title({ text }: { text: string }) {
-  return text.split("\n").map((line, i) => (
-    <Fragment key={i}>
-      {i > 0 && " "}
-      <span className="whitespace-nowrap">{line}</span>
-    </Fragment>
-  ));
-}
-
 export function ProductTile({
   data,
   variant = "grid",
@@ -85,7 +72,7 @@ export function ProductTile({
           s.title,
         )}
       >
-        <Title text={data.title} />
+        <Phrases text={data.title} />
       </Heading>
 
       <p className={cn("mt-2 leading-[1.35] text-balance", s.subtitle)}>

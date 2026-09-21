@@ -1,8 +1,10 @@
 import { cache } from "react";
 import {
+  compare,
   featuredTile,
   gridTiles,
   heroTile,
+  highlights,
   latestArticles,
   productsLink,
 } from "@/lib/mock/home";
@@ -25,6 +27,8 @@ export const getHomePage = cache(async (): Promise<HomePageData> => {
     featured: featuredTile,
     grid: gridTiles,
     productsLink,
+    compare,
+    highlights,
   };
 });
 

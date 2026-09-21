@@ -35,7 +35,9 @@ export type HomePageData = {
   grid: ProductTileData[];
   /** Link under the grid, e.g. "ดูสินค้าทั้งหมด 7 รุ่น" */
   productsLink: LinkField;
-  // compare, highlights, oem … added section by section
+  compare: CompareData;
+  highlights: HighlightsData;
+  // oem … added section by section
 };
 
 /** Article card; will come from WP posts, not from the home page fields. */
@@ -44,4 +46,39 @@ export type ArticleCard = {
   href: string;
   category: string;
   image?: Media;
+};
+
+export type SpecRow = {
+  label: string;
+  value: string;
+};
+
+export type CompareColumn = {
+  title: string;
+  subtitle: string;
+  image: Media;
+  primary: LinkField;
+  secondary?: LinkField;
+  /** Same labels, same order in every column so the rows line up */
+  specs: SpecRow[];
+};
+
+export type CompareData = {
+  title: string;
+  lead?: string;
+  columns: CompareColumn[];
+};
+
+export type Highlight = {
+  /** Big typographic value, e.g. "3 ปี" — keep it short (1–2 words) */
+  value: string;
+  title: string;
+  body: string;
+};
+
+export type HighlightsData = {
+  title: string;
+  /** Designed for 4 items (one row on desktop) */
+  items: Highlight[];
+  link?: LinkField;
 };
