@@ -90,6 +90,18 @@
   --radius-pane: 22px; /* big split panels */
   --radius-box: 16px; /* logo banner, smaller containers */
 
+  /* ─── Motion ─── */
+  /* Charge line: the page's one signature animation (hero only) */
+  --animate-charge: charge 2.2s cubic-bezier(0.25, 0.8, 0.3, 1) 0.5s forwards;
+  @keyframes charge {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
   /* ─── Containers (namespace → max-w-* utilities) ─── */
   --container-page: 1280px; /* max-w-page */
   --container-narrow: 960px; /* max-w-narrow */

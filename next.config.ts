@@ -1,15 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "loremflickr.com",
-        pathname: "/**",
-      },
+      // TODO: add the WordPress media host, e.g.
+      // { protocol: "https", hostname: "cms.evstarthailand.com" },
     ],
   },
 };
