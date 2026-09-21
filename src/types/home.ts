@@ -37,7 +37,7 @@ export type HomePageData = {
   productsLink: LinkField;
   compare: CompareData;
   highlights: HighlightsData;
-  // oem … added section by section
+  oem: OemData;
 };
 
 /** Article card; will come from WP posts, not from the home page fields. */
@@ -81,4 +81,16 @@ export type HighlightsData = {
   /** Designed for 4 items (one row on desktop) */
   items: Highlight[];
   link?: LinkField;
+};
+
+export type OemData = {
+  title: string;
+  lead?: string;
+  /**
+   * Partner logos. One item = shown as a single banner image;
+   * several items = shown as a logo grid (preferred: editable, sharper).
+   */
+  logos: Media[];
+  primary: LinkField;
+  secondary?: LinkField;
 };

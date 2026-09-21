@@ -1,5 +1,6 @@
 import { CompareSection } from "@/components/home/CompareSection";
 import { HighlightsSection } from "@/components/home/HighlightsSection";
+import { OemSection } from "@/components/home/OemSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ProductGrid } from "@/components/home/ProductGrid";
 import { ProductTile } from "@/components/home/ProductTile";
@@ -25,7 +26,9 @@ export default async function HomePage() {
 
       <HighlightsSection data={home.highlights} />
 
-      {/* next: OEM … <ArticlesSection items={articles} /> */}
+      <OemSection data={home.oem} />
+
+      {/* next: <ArticlesSection items={articles} /> */}
     </>
   );
 }

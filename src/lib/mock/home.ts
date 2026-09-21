@@ -3,6 +3,7 @@ import type {
   CompareData,
   HighlightsData,
   LinkField,
+  OemData,
   ProductTileData,
 } from "@/types/home";
 
@@ -173,6 +174,23 @@ export const highlights: HighlightsData = {
     },
   ],
   link: { label: "ดูบริการทั้งหมด", href: "/services" },
+};
+
+export const oem: OemData = {
+  title: "ผลิตให้แบรนด์ชั้นนำ\nแบบ OEM",
+  lead: "ตั้งแต่ออกแบบวงจร งานแม่พิมพ์ ไปจนถึงทดสอบตามมาตรฐานสากล ทั้งในไทยและต่างประเทศ",
+  // Temporary: the combined banner from the current site.
+  // Better: ask the client for each partner logo as a separate SVG/PNG.
+  logos: [
+    {
+      src: "/images/oem/partner-logos.png",
+      alt: "โลโก้แบรนด์ที่ EV Star ผลิตให้แบบ OEM",
+      width: 1600,
+      height: 400,
+    },
+  ],
+  primary: { label: "ติดต่อทีม OEM", href: "/contact?topic=oem" },
+  secondary: { label: "ดูเพิ่มเติม", href: "/oem" },
 };
 
 export const latestArticles: ArticleCard[] = [

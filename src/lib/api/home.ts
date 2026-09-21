@@ -5,6 +5,7 @@ import {
   gridTiles,
   heroTile,
   highlights,
+  oem,
   latestArticles,
   productsLink,
 } from "@/lib/mock/home";
@@ -29,6 +30,7 @@ export const getHomePage = cache(async (): Promise<HomePageData> => {
     productsLink,
     compare,
     highlights,
+    oem,
   };
 });
 
