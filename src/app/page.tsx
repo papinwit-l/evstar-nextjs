@@ -1,16 +1,20 @@
+import { ArticlesSection } from "@/components/home/ArticlesSection";
 import { CompareSection } from "@/components/home/CompareSection";
+import { FinalCtaSection } from "@/components/home/FinalCtaSection";
+import { HeroSection } from "@/components/home/HeroSection";
 import { HighlightsSection } from "@/components/home/HighlightsSection";
 import { OemSection } from "@/components/home/OemSection";
-import { HeroSection } from "@/components/home/HeroSection";
 import { ProductGrid } from "@/components/home/ProductGrid";
 import { ProductTile } from "@/components/home/ProductTile";
 import { getHomePage, getLatestArticles } from "@/lib/api/home";
 
 export default async function HomePage() {
-  // Independent sources → fetch in parallel, not one after another
+  // Independent sources → fetch in parallel.
+  // Home fields are required (a failure shows error.tsx);
+  // articles are optional (a failure just hides that section).
   const [home, articles] = await Promise.all([
     getHomePage(),
-    getLatestArticles(3),
+    getLatestArticles(3).catch(() => []),
   ]);
 
   return (
@@ -23,12 +27,10 @@ export default async function HomePage() {
       </div>
 
       <CompareSection data={home.compare} />
-
       <HighlightsSection data={home.highlights} />
-
       <OemSection data={home.oem} />
-
-      {/* next: <ArticlesSection items={articles} /> */}
+      <ArticlesSection items={articles} />
+      <FinalCtaSection data={home.finalCta} />
     </>
   );
 }

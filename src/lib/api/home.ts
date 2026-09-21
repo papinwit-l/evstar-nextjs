@@ -2,6 +2,7 @@ import { cache } from "react";
 import {
   compare,
   featuredTile,
+  finalCta,
   gridTiles,
   heroTile,
   highlights,
@@ -31,6 +32,7 @@ export const getHomePage = cache(async (): Promise<HomePageData> => {
     compare,
     highlights,
     oem,
+    finalCta,
   };
 });
 

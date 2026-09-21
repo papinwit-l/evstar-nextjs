@@ -38,6 +38,7 @@ export type HomePageData = {
   compare: CompareData;
   highlights: HighlightsData;
   oem: OemData;
+  finalCta: FinalCtaData;
 };
 
 /** Article card; will come from WP posts, not from the home page fields. */
@@ -93,4 +94,12 @@ export type OemData = {
   logos: Media[];
   primary: LinkField;
   secondary?: LinkField;
+};
+
+export type FinalCtaData = {
+  title: string;
+  lead?: string;
+  primary: LinkField;
+  /** Show the LINE OA button (URL comes from site config) */
+  showLine?: boolean;
 };

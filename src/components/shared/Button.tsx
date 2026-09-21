@@ -3,8 +3,8 @@ import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
 type ButtonProps = ComponentProps<typeof Link> & {
-  /** solid = primary action, outline = secondary action */
-  variant?: "solid" | "outline";
+  /** solid = primary action, outline = secondary action, neutral = grey outline (e.g. LINE) */
+  variant?: "solid" | "outline" | "neutral";
   /** use "dark" when the button sits on a primary/black background */
   tone?: "light" | "dark";
   size?: "md" | "sm";
@@ -26,6 +26,10 @@ const variants = {
   outline: {
     light: "border border-cta text-accent-text hover:bg-cta hover:text-on-cta",
     dark: "border border-accent-on-dark text-accent-on-dark hover:bg-accent-on-dark hover:text-primary",
+  },
+  neutral: {
+    light: "border border-border-strong text-text hover:border-text",
+    dark: "border border-primary-light text-on-primary hover:border-on-primary",
   },
 };
 

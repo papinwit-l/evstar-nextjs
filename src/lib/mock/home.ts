@@ -1,6 +1,7 @@
 import type {
   ArticleCard,
   CompareData,
+  FinalCtaData,
   HighlightsData,
   LinkField,
   OemData,
@@ -191,6 +192,13 @@ export const oem: OemData = {
   ],
   primary: { label: "ติดต่อทีม OEM", href: "/contact?topic=oem" },
   secondary: { label: "ดูเพิ่มเติม", href: "/oem" },
+};
+
+export const finalCta: FinalCtaData = {
+  title: "พร้อมติดตั้งเครื่องชาร์จ\nแล้วหรือยัง",
+  lead: "ทีมงานช่วยประเมินหน้างาน และแนะนำรุ่นที่เหมาะกับการใช้งานของคุณ",
+  primary: { label: "ติดต่อเรา", href: "/contact" },
+  showLine: true,
 };
 
 export const latestArticles: ArticleCard[] = [
