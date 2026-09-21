@@ -24,7 +24,8 @@ export type AboutPageData = {
   /** 2–4 items; the grid adapts to the count */
   stats: Stat[];
   story: StoryData;
-  // capabilities, milestones, standards, cta … added section by section
+  capabilities: CapabilitiesData;
+  // milestones, standards, cta … added section by section
 };
 
 export type StoryData = {
@@ -35,4 +36,18 @@ export type StoryData = {
   paragraphs: string[];
   /** Portrait photo (4:5): founder or people at work */
   image?: Media;
+};
+
+export type Capability = {
+  title: string;
+  body: string;
+  /** Landscape photo (4:3) shown under the text */
+  image?: Media;
+};
+
+export type CapabilitiesData = {
+  title: string;
+  lead?: string;
+  /** Designed for 3 cards */
+  items: Capability[];
 };

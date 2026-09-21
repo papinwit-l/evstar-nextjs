@@ -1,4 +1,9 @@
-import type { AboutHeroData, Stat, StoryData } from "@/types/about";
+import type {
+  AboutHeroData,
+  CapabilitiesData,
+  Stat,
+  StoryData,
+} from "@/types/about";
 
 export const aboutHero: AboutHeroData = {
   kicker: "เกี่ยวกับ EV Star",
@@ -25,4 +30,24 @@ export const aboutStory: StoryData = {
     "จากเครื่องชาร์จสำหรับบ้าน สู่สถานีชาร์จเร็วสำหรับธุรกิจ เราดูแลตั้งแต่การออกแบบ การผลิต ไปจนถึงการติดตั้งและบริการหลังการขาย",
   ],
   image: undefined,
+};
+
+export const aboutCapabilities: CapabilitiesData = {
+  title: "ครบทุกขั้นตอน\nในที่เดียว",
+  lead: "ควบคุมคุณภาพเองทั้งหมด ตั้งแต่แบบร่างแรก จนถึงวันที่เครื่องชาร์จเริ่มทำงานที่หน้างานของคุณ",
+  // TODO: photos of the production line, testing and installation team
+  items: [
+    {
+      title: "ออกแบบและผลิต",
+      body: "ออกแบบวงจร งานแม่พิมพ์ และประกอบ ทั้งสินค้าของเราเองและงาน OEM",
+    },
+    {
+      title: "ทดสอบตามมาตรฐาน",
+      body: "ทดสอบทุกเครื่องก่อนส่งมอบ รองรับมาตรฐานยุโรป อเมริกา และญี่ปุ่น",
+    },
+    {
+      title: "ติดตั้งและดูแล",
+      body: "ทีมช่างทั่วประเทศ รับประกัน 3 ปี และดูแลหลังการขายตลอดอายุการใช้งาน",
+    },
+  ],
 };
