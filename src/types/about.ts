@@ -23,5 +23,16 @@ export type AboutPageData = {
   hero: AboutHeroData;
   /** 2–4 items; the grid adapts to the count */
   stats: Stat[];
-  // story, capabilities, milestones, standards, cta … added section by section
+  story: StoryData;
+  // capabilities, milestones, standards, cta … added section by section
+};
+
+export type StoryData = {
+  kicker?: string;
+  /** "\n" marks where Thai phrases may wrap */
+  title: string;
+  /** First paragraph is shown larger as the intro */
+  paragraphs: string[];
+  /** Portrait photo (4:5): founder or people at work */
+  image?: Media;
 };

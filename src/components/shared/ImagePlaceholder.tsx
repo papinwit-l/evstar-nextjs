@@ -19,7 +19,7 @@ export function ImagePlaceholder({ label, className }: ImagePlaceholderProps) {
       role="img"
       aria-label={`รูปภาพที่ยังไม่มี: ${label}`}
       className={cn(
-        "grid place-items-center rounded-[18px] border border-dashed border-border-strong bg-surface-dim p-4 text-center text-[0.82rem] text-text-subtle",
+        "grid place-items-center rounded-[18px] border border-dashed border-border-strong bg-black/[0.03] p-4 text-center text-[0.82rem] text-text-subtle",
         className,
       )}
     >

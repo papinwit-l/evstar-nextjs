@@ -1,4 +1,4 @@
-import type { AboutHeroData, Stat } from "@/types/about";
+import type { AboutHeroData, Stat, StoryData } from "@/types/about";
 
 export const aboutHero: AboutHeroData = {
   kicker: "เกี่ยวกับ EV Star",
@@ -15,3 +15,14 @@ export const aboutStats: Stat[] = [
   { value: "7 รุ่น", label: "เครื่องชาร์จ AC และ DC" },
   { value: "240 kW", label: "กำลังชาร์จสูงสุด" },
 ];
+
+export const aboutStory: StoryData = {
+  kicker: "เรื่องราวของเรา",
+  title: "เริ่มจากความเชื่อ\nว่ารถไฟฟ้า\nต้องชาร์จได้ง่าย",
+  paragraphs: [
+    // TODO: founding year and real story from the client
+    "EV Star ก่อตั้งเมื่อปี XXXX โดยทีมวิศวกรที่ต้องการให้คนไทยเข้าถึงการชาร์จรถยนต์ไฟฟ้าที่ปลอดภัย และใช้งานง่ายเหมือนเสียบปลั๊กทั่วไป",
+    "จากเครื่องชาร์จสำหรับบ้าน สู่สถานีชาร์จเร็วสำหรับธุรกิจ เราดูแลตั้งแต่การออกแบบ การผลิต ไปจนถึงการติดตั้งและบริการหลังการขาย",
+  ],
+  image: undefined,
+};
