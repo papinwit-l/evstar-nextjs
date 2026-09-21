@@ -2,7 +2,7 @@
  * About page data shapes — mirror as ACF fields on the WP "About" page.
  */
 
-import type { Media } from "@/types/common";
+import type { CtaData, Media } from "@/types/common";
 
 export type AboutHeroData = {
   kicker?: string;
@@ -26,7 +26,9 @@ export type AboutPageData = {
   story: StoryData;
   capabilities: CapabilitiesData;
   milestones: MilestonesData;
-  // standards, cta … added section by section
+  standards: StandardsData;
+  partners: PartnersData;
+  cta: CtaData;
 };
 
 export type StoryData = {
@@ -63,4 +65,25 @@ export type MilestonesData = {
   title: string;
   /** Oldest first. 4 per row on desktop; more items wrap to a new row */
   items: Milestone[];
+};
+
+export type Standard = {
+  /** Certificate or award name, e.g. "MUSE Design Awards" */
+  name: string;
+  /** Short line under the name, e.g. "รางวัลการออกแบบ LPC" */
+  note?: string;
+  /** Square logo/seal, shown at 64px */
+  logo?: Media;
+};
+
+export type StandardsData = {
+  title: string;
+  lead?: string;
+  /** Designed for 4 (2 per row on mobile) */
+  items: Standard[];
+};
+
+export type PartnersData = {
+  title: string;
+  logos: Media[];
 };

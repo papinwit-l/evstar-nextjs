@@ -1,8 +1,12 @@
+import { oem } from "@/lib/mock/home";
+import type { CtaData } from "@/types/common";
 import type {
   AboutHeroData,
   CapabilitiesData,
   MilestonesData,
+  PartnersData,
   Stat,
+  StandardsData,
   StoryData,
 } from "@/types/about";
 
@@ -66,4 +70,30 @@ export const aboutMilestones: MilestonesData = {
       body: "[รายละเอียด]",
     },
   ],
+};
+
+export const aboutStandards: StandardsData = {
+  title: "มาตรฐานและรางวัล",
+  lead: "เครื่องชาร์จทุกรุ่นผ่านการรับรองจากหน่วยงานที่เชื่อถือได้",
+  items: [
+    // TODO: real certificate names + logos from the client
+    { name: "[มาตรฐาน 1]", note: "ใบรับรอง" },
+    { name: "[มาตรฐาน 2]", note: "ใบรับรอง" },
+    { name: "[มาตรฐาน 3]", note: "ใบรับรอง" },
+    { name: "MUSE Design Awards", note: "รางวัลการออกแบบ LPC" },
+  ],
+};
+
+export const aboutPartners: PartnersData = {
+  title: "ได้รับความไว้วางใจจากแบรนด์ชั้นนำ",
+  // Same logos as the home OEM section. In WordPress, keep partner logos in
+  // ONE place (options page or a "partner" post type) and read them on both pages.
+  logos: oem.logos,
+};
+
+export const aboutCta: CtaData = {
+  title: "อยากร่วมงาน\nกับ EV Star",
+  lead: "ติดตั้งเครื่องชาร์จที่บ้านหรือธุรกิจ หรือพัฒนาเครื่องชาร์จแบรนด์ของคุณเองกับเรา",
+  primary: { label: "ติดต่อเรา", href: "/contact" },
+  secondary: { label: "ร่วมเป็นพาร์ทเนอร์ OEM", href: "/oem" },
 };

@@ -3,7 +3,7 @@
  * so the mock data can be swapped for a WPGraphQL query later.
  */
 
-import type { LinkField, Media } from "@/types/common";
+import type { CtaData, LinkField, Media } from "@/types/common";
 
 // Re-exported so existing imports from "@/types/home" keep working
 export type { LinkField, Media };
@@ -89,10 +89,5 @@ export type OemData = {
   secondary?: LinkField;
 };
 
-export type FinalCtaData = {
-  title: string;
-  lead?: string;
-  primary: LinkField;
-  /** Show the LINE OA button (URL comes from site config) */
-  showLine?: boolean;
-};
+/** Kept as an alias so existing imports keep working. */
+export type FinalCtaData = CtaData;

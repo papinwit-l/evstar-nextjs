@@ -1,11 +1,11 @@
 import { ArticlesSection } from "@/components/home/ArticlesSection";
 import { CompareSection } from "@/components/home/CompareSection";
-import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { HighlightsSection } from "@/components/home/HighlightsSection";
 import { OemSection } from "@/components/home/OemSection";
 import { ProductGrid } from "@/components/home/ProductGrid";
 import { ProductTile } from "@/components/home/ProductTile";
+import { CtaSection } from "@/components/shared/CtaSection";
 import { getHomePage, getLatestArticles } from "@/lib/api/home";
 
 export default async function HomePage() {
@@ -30,7 +30,7 @@ export default async function HomePage() {
       <HighlightsSection data={home.highlights} />
       <OemSection data={home.oem} />
       <ArticlesSection items={articles} />
-      <FinalCtaSection data={home.finalCta} />
+      <CtaSection data={home.finalCta} />
     </>
   );
 }
