@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { CategorySection } from "@/components/products/CategorySection";
 import { CategoryNav } from "@/components/products/CategoryNav";
-import { ProductsHero } from "@/components/products/ProductsHero";
 import { CtaSection } from "@/components/shared/CtaSection";
+import { PageHero } from "@/components/shared/PageHero";
 import { getProductsPage } from "@/lib/api/products";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default async function ProductsPage() {
 
   return (
     <>
-      <ProductsHero title={data.title} lead={data.lead} />
+      <PageHero title={data.title} lead={data.lead} />
       <CategoryNav categories={data.categories} />
       {data.categories.map((category, i) => (
         <CategorySection

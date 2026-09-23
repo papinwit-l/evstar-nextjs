@@ -19,8 +19,9 @@ export function StepsSection({
 
   return (
     <section
+      id="process"
       aria-labelledby="process-title"
-      className={cn("py-(--section-py)", className)}
+      className={cn("scroll-mt-(--header-height) py-(--section-py)", className)}
     >
       <Container>
         <SectionHeading
