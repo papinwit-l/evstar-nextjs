@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 type SectionHeadingProps = {
   /** Supports "\n" phrase breaks, like tile titles */
   title: string;
+  /** Same "\n" phrase breaks */
   lead?: string;
   /** Pass to the section's aria-labelledby */
   id?: string;
@@ -27,7 +28,7 @@ export function SectionHeading({
       </h2>
       {lead && (
         <p className="mx-auto mt-3.5 max-w-[40ch] text-[clamp(1.05rem,1.6vw,1.3rem)] text-text-muted text-balance">
-          {lead}
+          <Phrases text={lead} />
         </p>
       )}
     </div>

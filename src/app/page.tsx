@@ -28,7 +28,7 @@ export default async function HomePage() {
         <AccessoryCards items={home.accessories} />
       </div>
 
-      <p className="pt-9 text-center text-[1.05rem]">
+      <p className="py-9 text-center text-[1.05rem]">
         <ChevronLink href={home.productsLink.href}>
           {home.productsLink.label}
         </ChevronLink>

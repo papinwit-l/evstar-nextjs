@@ -125,8 +125,9 @@ export const highlights: HighlightsData = {
 };
 
 export const finalCta: FinalCtaData = {
-  title: "พร้อมติดตั้งเครื่องชาร์จ\nแล้วหรือยัง",
-  lead: "ทีมงานช่วยประเมินหน้างาน และแนะนำรุ่นที่เหมาะกับการใช้งานของคุณ",
-  primary: { label: "ติดต่อเรา", href: "/contact" },
+  title: "พร้อมติดตั้ง\nเครื่องชาร์จแล้วหรือยัง",
+  lead: "ส่งข้อมูลหน้างานเบื้องต้น\nทีมงานประเมินและเสนอราคาให้",
+  primary: { label: "ขอใบเสนอราคา", href: "/quote" },
+  secondary: { label: "จองคิวสำรวจหน้างาน", href: "/quote?intent=survey" },
   showLine: true,
 };
