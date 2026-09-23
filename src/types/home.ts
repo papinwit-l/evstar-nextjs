@@ -55,16 +55,7 @@ export type HomePageData = {
   /** Link under the product tiles, e.g. "ดูสินค้าทั้งหมด" */
   productsLink: LinkField;
   highlights: HighlightsData;
-  oem: OemData;
   finalCta: FinalCtaData;
-};
-
-/** Article card; will come from WP posts, not from the home page fields. */
-export type ArticleCard = {
-  title: string;
-  href: string;
-  category: string;
-  image?: Media;
 };
 
 export type Highlight = {
@@ -79,18 +70,6 @@ export type HighlightsData = {
   /** Designed for 4 items (one row on desktop) */
   items: Highlight[];
   link?: LinkField;
-};
-
-export type OemData = {
-  title: string;
-  lead?: string;
-  /**
-   * Partner logos. One item = shown as a single banner image;
-   * several items = shown as a logo grid (preferred: editable, sharper).
-   */
-  logos: Media[];
-  primary: LinkField;
-  secondary?: LinkField;
 };
 
 /** Kept as an alias so existing imports keep working. */

@@ -1,21 +1,21 @@
 import { AccessoryCards } from "@/components/home/AccessoryCards";
-import { ArticlesSection } from "@/components/home/ArticlesSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { HighlightsSection } from "@/components/home/HighlightsSection";
-import { OemSection } from "@/components/home/OemSection";
+import { PortfolioPreview } from "@/components/home/PortfolioPreview";
 import { ProductGrid } from "@/components/home/ProductGrid";
 import { ProductTile } from "@/components/home/ProductTile";
 import { ChevronLink } from "@/components/shared/ChevronLink";
 import { CtaSection } from "@/components/shared/CtaSection";
-import { getHomePage, getLatestArticles } from "@/lib/api/home";
+import { getHomePage } from "@/lib/api/home";
+import { getPortfolioPreview } from "@/lib/api/portfolio";
 
 export default async function HomePage() {
   // Independent sources → fetch in parallel.
   // Home fields are required (a failure shows error.tsx);
-  // articles are optional (a failure just hides that section).
-  const [home, articles] = await Promise.all([
+  // the portfolio is optional (a failure just hides that section).
+  const [home, portfolio] = await Promise.all([
     getHomePage(),
-    getLatestArticles(3).catch(() => []),
+    getPortfolioPreview(3).catch(() => null),
   ]);
 
   return (
@@ -28,15 +28,14 @@ export default async function HomePage() {
         <AccessoryCards items={home.accessories} />
       </div>
 
-      <p className="py-9 text-center text-[1.05rem]">
+      <p className="pt-9 text-center text-[1.05rem]">
         <ChevronLink href={home.productsLink.href}>
           {home.productsLink.label}
         </ChevronLink>
       </p>
 
       <HighlightsSection data={home.highlights} />
-      <OemSection data={home.oem} />
-      <ArticlesSection items={articles} />
+      {portfolio && <PortfolioPreview data={portfolio} />}
       <CtaSection data={home.finalCta} />
     </>
   );

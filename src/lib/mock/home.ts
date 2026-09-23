@@ -1,11 +1,9 @@
 import type {
   AccessoryCardData,
-  ArticleCard,
   FinalCtaData,
   HeroData,
   HighlightsData,
   LinkField,
-  OemData,
   ProductTileData,
 } from "@/types/home";
 
@@ -126,44 +124,9 @@ export const highlights: HighlightsData = {
   ],
 };
 
-export const oem: OemData = {
-  title: "ผลิตให้แบรนด์ชั้นนำ\nแบบ OEM",
-  lead: "ตั้งแต่ออกแบบวงจร งานแม่พิมพ์ ไปจนถึงทดสอบตามมาตรฐานสากล ทั้งในไทยและต่างประเทศ",
-  // Temporary: the combined banner from the current site.
-  // Better: ask the client for each partner logo as a separate SVG/PNG.
-  logos: [
-    {
-      src: "/images/oem/partner-logos.png",
-      alt: "โลโก้แบรนด์ที่ EV Star ผลิตให้แบบ OEM",
-      width: 1600,
-      height: 400,
-    },
-  ],
-  primary: { label: "ติดต่อทีม OEM", href: "/contact?topic=oem" },
-  secondary: { label: "ดูเพิ่มเติม", href: "/oem" },
-};
-
 export const finalCta: FinalCtaData = {
   title: "พร้อมติดตั้งเครื่องชาร์จ\nแล้วหรือยัง",
   lead: "ทีมงานช่วยประเมินหน้างาน และแนะนำรุ่นที่เหมาะกับการใช้งานของคุณ",
   primary: { label: "ติดต่อเรา", href: "/contact" },
   showLine: true,
 };
-
-export const latestArticles: ArticleCard[] = [
-  {
-    title: "เลือกเครื่องชาร์จ EV สำหรับบ้าน ต้องดูอะไรบ้าง",
-    href: "/articles/choose-home-ev-charger",
-    category: "คู่มือ",
-  },
-  {
-    title: "ชาร์จ AC กับ DC ต่างกันอย่างไร",
-    href: "/articles/ac-vs-dc-charging",
-    category: "ความรู้",
-  },
-  {
-    title: "เตรียมระบบไฟที่บ้าน ก่อนติดตั้งเครื่องชาร์จ",
-    href: "/articles/prepare-home-electrical",
-    category: "การติดตั้ง",
-  },
-];

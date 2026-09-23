@@ -6,11 +6,9 @@ import {
   gridTiles,
   heroTile,
   highlights,
-  latestArticles,
-  oem,
   productsLink,
 } from "@/lib/mock/home";
-import type { ArticleCard, HomePageData } from "@/types/home";
+import type { HomePageData } from "@/types/home";
 
 /**
  * Data layer for the home page.
@@ -31,15 +29,6 @@ export const getHomePage = cache(async (): Promise<HomePageData> => {
     accessories: accessoryCards,
     productsLink,
     highlights,
-    oem,
     finalCta,
   };
 });
-
-/** Latest posts — a separate WP query, independent of the home page fields. */
-export const getLatestArticles = cache(
-  async (limit = 3): Promise<ArticleCard[]> => {
-    // later: return wpQuery(LATEST_POSTS_QUERY, { first: limit }, { next: { tags: ["posts"] } })
-    return latestArticles.slice(0, limit);
-  },
-);
