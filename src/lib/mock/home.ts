@@ -1,7 +1,6 @@
 import type {
   AccessoryCardData,
   ArticleCard,
-  CompareData,
   FinalCtaData,
   HeroData,
   HighlightsData,
@@ -99,81 +98,32 @@ export const productsLink: LinkField = {
   href: "/products",
 };
 
-export const compare: CompareData = {
-  title: "เครื่องชาร์จแบบไหน\nเหมาะกับคุณ",
-  lead: "รองรับมาตรฐานยุโรป อเมริกา และญี่ปุ่น ตั้งแต่โรงรถที่บ้านไปจนถึงสถานีชาร์จสาธารณะ",
-  columns: [
-    {
-      title: "Home Used",
-      subtitle: "ชาร์จข้ามคืนที่บ้านหรือคอนโด",
-      image: {
-        src: `${IMG}/lpc.png`,
-        alt: "เครื่องชาร์จ Home Used",
-        width: 800,
-        height: 1000,
-      },
-      primary: { label: "ดูสินค้า", href: "/products/home" },
-      secondary: { label: "สอบถามการติดตั้ง", href: "/contact?topic=install" },
-      specs: [
-        { label: "กำลังไฟ", value: "AC 7–22 kW" },
-        { label: "การติดตั้ง", value: "ติดผนัง หรือตั้งพื้น" },
-        { label: "เหมาะกับ", value: "บ้าน คอนโด ออฟฟิศ" },
-        { label: "รุ่น", value: "AC006, LPC, AC002" },
-      ],
-    },
-    {
-      title: "Commercial",
-      subtitle: "ชาร์จเร็วสำหรับธุรกิจและสถานีสาธารณะ",
-      image: {
-        src: `${IMG}/core-240.png`,
-        alt: "เครื่องชาร์จ Commercial",
-        width: 800,
-        height: 1000,
-      },
-      primary: { label: "ดูสินค้า", href: "/products/commercial" },
-      secondary: { label: "ปรึกษาโครงการ", href: "/contact?topic=project" },
-      specs: [
-        { label: "กำลังไฟ", value: "DC 30–240 kW" },
-        { label: "การติดตั้ง", value: "ตั้งพื้น พร้อมระบบ Smart Load" },
-        {
-          label: "เหมาะกับ",
-          value: "อาคาร ห้างสรรพสินค้า ปั๊มน้ำมัน สถานีชาร์จ",
-        },
-        {
-          label: "รุ่น",
-          value: "Kern-40, Coremini 60, Core 120–180, Core 240",
-        },
-      ],
-    },
-  ],
-};
-
+// The client's four "Why Choose Us" points (emoji replaced by the big-value style)
 export const highlights: HighlightsData = {
-  title: "ดูแลครบ ตั้งแต่วันติดตั้ง\nจนตลอดอายุการใช้งาน",
+  title: "ทำไมต้อง\nEVSTAR × ChargeCore",
   items: [
     {
-      value: "3 ปี",
-      title: "รับประกันสินค้า",
-      // TODO: confirm with client — 3-year warranty and 10-day return are different policies
-      body: "หากสินค้าขัดข้องหรือเสียหาย ส่งคืนได้ภายใน 10 วันนับจากวันรับสินค้า",
+      value: "100%",
+      title: "Official Partner",
+      body: "สินค้าของแท้จาก ChargeCore Global พร้อมรับประกันตรงจากศูนย์",
     },
     {
-      value: "ทั่วไทย",
-      title: "ทีมช่างติดตั้ง",
-      body: "ช่างผ่านการอบรมตามมาตรฐาน ติดตั้งเต็มระบบอย่างปลอดภัย",
+      value: "OCPP",
+      title: "Smart Technology",
+      body: "สั่งงานผ่านแอป เช็กสถานะแบบ Real-time อัปเดตซอฟต์แวร์แบบ OTA",
     },
     {
-      value: "Smart Load",
-      title: "จ่ายไฟอย่างมีประสิทธิภาพ",
-      body: "คำนวณและแบ่งกำลังไฟให้รถแต่ละคันโดยอัตโนมัติ",
+      value: "CE · TÜV",
+      title: "Safety & Standard",
+      // TODO: confirm IP54 vs IP65 — every ChargeCore source says IP54
+      body: "ผ่านมาตรฐานความปลอดภัยระดับโลก กันน้ำกันฝุ่น ติดตั้งได้ทั้งในร่มและกลางแจ้ง",
     },
     {
-      value: "ตลอดอายุ",
-      title: "ดูแลหลังการขาย",
-      body: "ให้คำปรึกษาตั้งแต่ออกแบบ ติดตั้ง จนถึงซ่อมบำรุง",
+      value: "One-Stop",
+      title: "บริการครบวงจร",
+      body: "สำรวจหน้างาน ขออนุญาตการไฟฟ้า ติดตั้งโดยช่างผู้เชี่ยวชาญ และดูแลหลังการขาย",
     },
   ],
-  link: { label: "ดูบริการทั้งหมด", href: "/services" },
 };
 
 export const oem: OemData = {

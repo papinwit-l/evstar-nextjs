@@ -1,6 +1,5 @@
 import { AccessoryCards } from "@/components/home/AccessoryCards";
 import { ArticlesSection } from "@/components/home/ArticlesSection";
-import { CompareSection } from "@/components/home/CompareSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { HighlightsSection } from "@/components/home/HighlightsSection";
 import { OemSection } from "@/components/home/OemSection";
@@ -29,13 +28,12 @@ export default async function HomePage() {
         <AccessoryCards items={home.accessories} />
       </div>
 
-      <p className="pt-9 text-center text-[1.05rem]">
+      <p className="py-9 text-center text-[1.05rem]">
         <ChevronLink href={home.productsLink.href}>
           {home.productsLink.label}
         </ChevronLink>
       </p>
 
-      <CompareSection data={home.compare} />
       <HighlightsSection data={home.highlights} />
       <OemSection data={home.oem} />
       <ArticlesSection items={articles} />

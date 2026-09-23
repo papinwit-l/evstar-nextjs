@@ -31,7 +31,6 @@ export type AccessoryCardData = {
   image?: Media;
 };
 
-/** Everything the home page reads from its own WP page (ACF fields). */
 export type ChargeLineData = {
   label: string;
   /** Bold part on the right, e.g. "7 – 240 kW" */
@@ -44,6 +43,7 @@ export type HeroData = ProductTileData & {
   chargeLine?: ChargeLineData;
 };
 
+/** Everything the home page reads from its own WP page (ACF fields). */
 export type HomePageData = {
   hero: HeroData;
   /** Black full-width tile under the hero */
@@ -52,9 +52,8 @@ export type HomePageData = {
   grid: ProductTileData[];
   /** Small cards under the tiles (Home Load Balancer, EVCC) */
   accessories: AccessoryCardData[];
-  /** Link under the grid, e.g. "ดูสินค้าทั้งหมด 7 รุ่น" */
+  /** Link under the product tiles, e.g. "ดูสินค้าทั้งหมด" */
   productsLink: LinkField;
-  compare: CompareData;
   highlights: HighlightsData;
   oem: OemData;
   finalCta: FinalCtaData;
@@ -66,27 +65,6 @@ export type ArticleCard = {
   href: string;
   category: string;
   image?: Media;
-};
-
-export type SpecRow = {
-  label: string;
-  value: string;
-};
-
-export type CompareColumn = {
-  title: string;
-  subtitle: string;
-  image: Media;
-  primary: LinkField;
-  secondary?: LinkField;
-  /** Same labels, same order in every column so the rows line up */
-  specs: SpecRow[];
-};
-
-export type CompareData = {
-  title: string;
-  lead?: string;
-  columns: CompareColumn[];
 };
 
 export type Highlight = {

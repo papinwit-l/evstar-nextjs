@@ -1,7 +1,6 @@
 import { cache } from "react";
 import {
   accessoryCards,
-  compare,
   featuredTile,
   finalCta,
   gridTiles,
@@ -31,7 +30,6 @@ export const getHomePage = cache(async (): Promise<HomePageData> => {
     grid: gridTiles,
     accessories: accessoryCards,
     productsLink,
-    compare,
     highlights,
     oem,
     finalCta,
