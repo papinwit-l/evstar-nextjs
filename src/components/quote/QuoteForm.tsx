@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { submitQuote } from "@/app/quote/actions";
+import { submitQuote } from "@/lib/actions/quote";
 import { controlClass, FormField } from "@/components/quote/FormField";
 import { OptionCards } from "@/components/quote/OptionCards";
 import {
