@@ -39,3 +39,18 @@ export type StepsData = {
   /** e.g. "ดูบริการทั้งหมด" → /services */
   link?: LinkField;
 };
+
+export type Highlight = {
+  /** Big typographic value, e.g. "3 ปี" — keep it short (1–2 words) */
+  value: string;
+  title: string;
+  body: string;
+};
+
+export type HighlightsData = {
+  title: string;
+  lead?: string;
+  /** Designed for 4 items (one row on desktop) */
+  items: Highlight[];
+  link?: LinkField;
+};

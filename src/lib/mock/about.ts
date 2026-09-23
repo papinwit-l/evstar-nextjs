@@ -1,99 +1,60 @@
-import { oem } from "@/lib/mock/home";
-import type { CtaData } from "@/types/common";
-import type {
-  AboutHeroData,
-  CapabilitiesData,
-  MilestonesData,
-  PartnersData,
-  Stat,
-  StandardsData,
-  StoryData,
-} from "@/types/about";
+import type { CtaData, HighlightsData } from "@/types/common";
+import type { AboutHeroData, StoryData } from "@/types/about";
 
 export const aboutHero: AboutHeroData = {
-  kicker: "เกี่ยวกับ EV Star",
-  title: "เครื่องชาร์จที่ออกแบบ\nเพื่อการใช้งานจริง",
-  lead: "EV Star ผลิต จัดจำหน่าย และติดตั้งเครื่องชาร์จรถยนต์ไฟฟ้า สำหรับบ้าน ธุรกิจ และสถานีชาร์จสาธารณะ พร้อมรับผลิตแบบ OEM ให้แบรนด์ชั้นนำ",
-  // TODO: wide factory/team photo from the client (21:9, at least 2400px wide)
+  kicker: "EVSTAR SOLUTIONS × ChargeCore",
+  title: "Driving the Future\nwith ChargeCore",
+  lead: "ผู้เชี่ยวชาญด้านระบบสถานีอัดประจุไฟฟ้า ตัวแทนจำหน่ายอย่างเป็นทางการของ ChargeCore Global ในประเทศไทย",
+  // TODO: wide photo from the client — team, office, or a finished installation (21:9)
   image: undefined,
 };
-
-export const aboutStats: Stat[] = [
-  // TODO: confirm both figures with the client (or remove until known)
-  { value: "XX ปี", label: "ประสบการณ์ด้านระบบไฟฟ้า" },
-  { value: "X,XXX+", label: "จุดติดตั้งทั่วประเทศ" },
-  { value: "7 รุ่น", label: "เครื่องชาร์จ AC และ DC" },
-  { value: "240 kW", label: "กำลังชาร์จสูงสุด" },
-];
 
 export const aboutStory: StoryData = {
   kicker: "เรื่องราวของเรา",
-  title: "เริ่มจากความเชื่อ\nว่ารถไฟฟ้า\nต้องชาร์จได้ง่าย",
+  title: "ยกระดับโครงสร้างพื้นฐาน\nด้าน EV ของไทย",
   paragraphs: [
-    // TODO: founding year and real story from the client
-    "EV Star ก่อตั้งเมื่อปี XXXX โดยทีมวิศวกรที่ต้องการให้คนไทยเข้าถึงการชาร์จรถยนต์ไฟฟ้าที่ปลอดภัย และใช้งานง่ายเหมือนเสียบปลั๊กทั่วไป",
-    "จากเครื่องชาร์จสำหรับบ้าน สู่สถานีชาร์จเร็วสำหรับธุรกิจ เราดูแลตั้งแต่การออกแบบ การผลิต ไปจนถึงการติดตั้งและบริการหลังการขาย",
+    "บริษัท อีวีสตาร์ โซลูชั่น จำกัด คือผู้เชี่ยวชาญด้านระบบสถานีอัดประจุไฟฟ้า ที่มุ่งมั่นยกระดับโครงสร้างพื้นฐานด้าน EV ของประเทศไทย เราได้รับความไว้วางใจให้เป็นตัวแทนจำหน่ายอย่างเป็นทางการของ ChargeCore Global แบรนด์เทคโนโลยีสถานีชาร์จชั้นนำระดับโลก",
+    "ความร่วมมือระหว่าง EVSTAR x ChargeCore ทำให้เราส่งมอบเครื่องชาร์จที่ทันสมัยทั้ง AC และ DC Fast Charger ที่โดดเด่นด้านความอัจฉริยะและความปลอดภัย พร้อมบริการแบบครบวงจร โดยทีมวิศวกรคนไทยที่มีประสบการณ์",
   ],
   image: undefined,
 };
 
-export const aboutCapabilities: CapabilitiesData = {
-  title: "ครบทุกขั้นตอน\nในที่เดียว",
-  lead: "ควบคุมคุณภาพเองทั้งหมด ตั้งแต่แบบร่างแรก จนถึงวันที่เครื่องชาร์จเริ่มทำงานที่หน้างานของคุณ",
-  // TODO: photos of the production line, testing and installation team
+/**
+ * Facts about ChargeCore, published by ChargeCore itself.
+ * The lead says so, because these are the brand's claims, not EVSTAR's.
+ * TODO: ask the client to confirm the figures against their partner materials.
+ */
+export const aboutWhy: HighlightsData = {
+  title: "แบรนด์ที่เราเลือกเป็นตัวแทน",
+  lead: "ข้อมูลจาก ChargeCore Global",
   items: [
     {
-      title: "ออกแบบและผลิต",
-      body: "ออกแบบวงจร งานแม่พิมพ์ และประกอบ ทั้งสินค้าของเราเองและงาน OEM",
+      value: "2015",
+      title: "ประสบการณ์ระดับโลก",
+      body: "พัฒนาเครื่องชาร์จมาตั้งแต่ปี 2015 ภายใต้ Nanjing PowerCore Technology",
     },
     {
-      title: "ทดสอบตามมาตรฐาน",
-      body: "ทดสอบทุกเครื่องก่อนส่งมอบ รองรับมาตรฐานยุโรป อเมริกา และญี่ปุ่น",
+      value: "50+",
+      title: "ประเทศที่ส่งออก",
+      body: "ใช้งานในเอเชียตะวันออกเฉียงใต้ ยุโรป และอเมริกาเหนือ",
     },
     {
-      title: "ติดตั้งและดูแล",
-      body: "ทีมช่างทั่วประเทศ รับประกัน 3 ปี และดูแลหลังการขายตลอดอายุการใช้งาน",
+      value: "TÜV · CE",
+      title: "มาตรฐานสากล",
+      body: "ผ่านการรับรองจาก TÜV Rheinland และ TÜV SÜD",
     },
-  ],
-};
-
-// TODO: every year and event is an example structure — replace with the client's history
-export const aboutMilestones: MilestonesData = {
-  title: "เส้นทางของเรา",
-  items: [
-    { year: "XXXX", title: "ก่อตั้งบริษัท", body: "[รายละเอียด]" },
-    { year: "XXXX", title: "เริ่มรับผลิตแบบ OEM", body: "[รายละเอียด]" },
-    { year: "XXXX", title: "เปิดตัวเครื่องชาร์จ DC", body: "[รายละเอียด]" },
     {
-      year: "XXXX",
-      title: "LPC ได้รับรางวัล MUSE Design Awards",
-      body: "[รายละเอียด]",
+      value: "OCPP",
+      title: "แพลตฟอร์มเปิด",
+      body: "เชื่อมต่อระบบจัดการหลังบ้าน และอัปเดตซอฟต์แวร์แบบ OTA",
     },
   ],
-};
-
-export const aboutStandards: StandardsData = {
-  title: "มาตรฐานและรางวัล",
-  lead: "เครื่องชาร์จทุกรุ่นผ่านการรับรองจากหน่วยงานที่เชื่อถือได้",
-  items: [
-    // TODO: real certificate names + logos from the client
-    { name: "[มาตรฐาน 1]", note: "ใบรับรอง" },
-    { name: "[มาตรฐาน 2]", note: "ใบรับรอง" },
-    { name: "[มาตรฐาน 3]", note: "ใบรับรอง" },
-    { name: "MUSE Design Awards", note: "รางวัลการออกแบบ LPC" },
-  ],
-};
-
-export const aboutPartners: PartnersData = {
-  title: "ได้รับความไว้วางใจจากแบรนด์ชั้นนำ",
-  // Same logos as the home OEM section. In WordPress, keep partner logos in
-  // ONE place (options page or a "partner" post type) and read them on both pages.
-  logos: oem.logos,
 };
 
 export const aboutCta: CtaData = {
-  title: "อยากร่วมงาน\nกับ EV Star",
-  lead: "ติดตั้งเครื่องชาร์จที่บ้านหรือธุรกิจ หรือพัฒนาเครื่องชาร์จแบรนด์ของคุณเองกับเรา",
-  primary: { label: "ติดต่อเรา", href: "/contact" },
-  secondary: { label: "ร่วมเป็นพาร์ทเนอร์ OEM", href: "/oem" },
+  title: "อยากร่วมงาน\nกับ EVSTAR",
+  lead: "ติดตั้งเครื่องชาร์จที่บ้าน\nหรือวางระบบสถานีชาร์จสำหรับธุรกิจ",
+  primary: { label: "ขอใบเสนอราคา", href: "/quote" },
+  secondary: { label: "ดูบริการทั้งหมด", href: "/services" },
+  showLine: true,
 };

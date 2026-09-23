@@ -3,7 +3,16 @@
  * so the mock data can be swapped for a WPGraphQL query later.
  */
 
-import type { CtaData, LinkField, Media, StepsData } from "@/types/common";
+import type {
+  CtaData,
+  HighlightsData,
+  LinkField,
+  Media,
+  StepsData,
+} from "@/types/common";
+
+// Re-exported so existing imports from "@/types/home" keep working
+export type { HighlightsData };
 
 // Re-exported so existing imports from "@/types/home" keep working
 export type { LinkField, Media };
@@ -58,20 +67,6 @@ export type HomePageData = {
   /** Four-step process, linking to /services */
   process: StepsData;
   finalCta: FinalCtaData;
-};
-
-export type Highlight = {
-  /** Big typographic value, e.g. "3 ปี" — keep it short (1–2 words) */
-  value: string;
-  title: string;
-  body: string;
-};
-
-export type HighlightsData = {
-  title: string;
-  /** Designed for 4 items (one row on desktop) */
-  items: Highlight[];
-  link?: LinkField;
 };
 
 /** Kept as an alias so existing imports keep working. */
