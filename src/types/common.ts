@@ -23,3 +23,19 @@ export type CtaData = {
   /** Show the LINE OA button (URL comes from site config) */
   showLine?: boolean;
 };
+
+/** One step of a process (ปรึกษา → สำรวจ → ติดตั้ง → ส่งมอบ). */
+export type Step = {
+  title: string;
+  /** One line on the home page; a fuller paragraph on /services */
+  body: string;
+};
+
+export type StepsData = {
+  title: string;
+  lead?: string;
+  /** Designed for 4 steps (one row on desktop) */
+  steps: Step[];
+  /** e.g. "ดูบริการทั้งหมด" → /services */
+  link?: LinkField;
+};

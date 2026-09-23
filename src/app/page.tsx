@@ -6,6 +6,7 @@ import { ProductGrid } from "@/components/home/ProductGrid";
 import { ProductTile } from "@/components/home/ProductTile";
 import { ChevronLink } from "@/components/shared/ChevronLink";
 import { CtaSection } from "@/components/shared/CtaSection";
+import { StepsSection } from "@/components/shared/StepsSection";
 import { getHomePage } from "@/lib/api/home";
 import { getPortfolioPreview } from "@/lib/api/portfolio";
 
@@ -35,6 +36,7 @@ export default async function HomePage() {
       </p>
 
       <HighlightsSection data={home.highlights} />
+      <StepsSection data={home.process} />
       {portfolio && <PortfolioPreview data={portfolio} />}
       <CtaSection data={home.finalCta} />
     </>

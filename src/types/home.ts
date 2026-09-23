@@ -3,7 +3,7 @@
  * so the mock data can be swapped for a WPGraphQL query later.
  */
 
-import type { CtaData, LinkField, Media } from "@/types/common";
+import type { CtaData, LinkField, Media, StepsData } from "@/types/common";
 
 // Re-exported so existing imports from "@/types/home" keep working
 export type { LinkField, Media };
@@ -55,6 +55,8 @@ export type HomePageData = {
   /** Link under the product tiles, e.g. "ดูสินค้าทั้งหมด" */
   productsLink: LinkField;
   highlights: HighlightsData;
+  /** Four-step process, linking to /services */
+  process: StepsData;
   finalCta: FinalCtaData;
 };
 

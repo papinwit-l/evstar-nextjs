@@ -1,3 +1,4 @@
+import type { StepsData } from "@/types/common";
 import type {
   AccessoryCardData,
   FinalCtaData,
@@ -36,8 +37,12 @@ export const featuredTile: ProductTileData = {
   subtitle: "ชาร์จเร็ว กำลังสูง\nสำหรับธุรกิจสถานีชาร์จโดยเฉพาะ",
   audience:
     "ปั๊มน้ำมัน · จุดพักรถมอเตอร์เวย์ · ศูนย์บริการรถยนต์ · ลานจอดขนาดใหญ่",
-  // TODO: ADC Series photo from ChargeCore
-  image: undefined,
+  image: {
+    src: `${IMG}/adc.png`,
+    alt: "ChargeCore ADC Series DC Fast Charger",
+    width: 1000,
+    height: 1000,
+  },
   primary: { label: "ดูรายละเอียด", href: "/products#dc-fast" },
   secondary: { label: "ปรึกษาโครงการ", href: "/quote?model=adc" },
 };
@@ -122,6 +127,33 @@ export const highlights: HighlightsData = {
       body: "สำรวจหน้างาน ขออนุญาตการไฟฟ้า ติดตั้งโดยช่างผู้เชี่ยวชาญ และดูแลหลังการขาย",
     },
   ],
+};
+
+// TODO: the client's two documents list different steps —
+// section list: สำรวจหน้างาน → เดินสายเมน → ติดตั้ง → ทดสอบ
+// detail doc:   ปรึกษา → สำรวจ → ติดตั้ง → ส่งมอบ  (used here)
+export const installSteps: StepsData = {
+  title: "ขั้นตอนการทำงาน",
+  lead: "ตั้งแต่โทรหาเรา จนถึงวันที่เครื่องชาร์จพร้อมใช้งาน",
+  steps: [
+    {
+      title: "ปรึกษา",
+      body: "แจ้งประเภทสถานที่และรุ่นที่สนใจ ทีมงานช่วยประเมินเบื้องต้น",
+    },
+    {
+      title: "สำรวจหน้างาน",
+      body: "ตรวจตู้ไฟ ขนาดมิเตอร์ และจุดติดตั้ง พร้อมเสนอราคา",
+    },
+    {
+      title: "ติดตั้ง",
+      body: "เดินสายเมนและติดตั้งตามมาตรฐานวิศวกรรม MEA และ PEA",
+    },
+    {
+      title: "ส่งมอบ",
+      body: "ทดสอบการชาร์จ สอนใช้งานแอป และเริ่มการรับประกัน",
+    },
+  ],
+  link: { label: "ดูบริการทั้งหมด", href: "/services" },
 };
 
 export const finalCta: FinalCtaData = {
