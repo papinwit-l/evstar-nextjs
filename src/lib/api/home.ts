@@ -1,13 +1,14 @@
 import { cache } from "react";
 import {
+  accessoryCards,
   compare,
   featuredTile,
   finalCta,
   gridTiles,
   heroTile,
   highlights,
-  oem,
   latestArticles,
+  oem,
   productsLink,
 } from "@/lib/mock/home";
 import type { ArticleCard, HomePageData } from "@/types/home";
@@ -28,6 +29,7 @@ export const getHomePage = cache(async (): Promise<HomePageData> => {
     hero: heroTile,
     featured: featuredTile,
     grid: gridTiles,
+    accessories: accessoryCards,
     productsLink,
     compare,
     highlights,

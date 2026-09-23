@@ -1,4 +1,5 @@
 import type {
+  AccessoryCardData,
   ArticleCard,
   CompareData,
   FinalCtaData,
@@ -31,78 +32,70 @@ export const heroTile: HeroData = {
   chargeLine: { label: "AC และ DC", value: "7 – 240 kW" },
 };
 
+// Dark tile — DC fast charging
 export const featuredTile: ProductTileData = {
-  kicker: "Ultra-Fast DC",
-  title: "Core Series 240",
-  subtitle: "กำลังสูงสุด 240 kW สำหรับสถานีชาร์จและรถเชิงพาณิชย์",
-  image: {
-    src: `${IMG}/core-240.png`,
-    alt: "Core Series 240kW High-Power DC Charging Pile",
-    width: 800,
-    height: 1000,
-  },
-  primary: { label: "ดูเพิ่มเติม", href: "/products/core-240" },
-  secondary: { label: "ปรึกษาโครงการ", href: "/contact?topic=project" },
+  kicker: "DC Fast Charger · 60–240 kW",
+  title: "ADC Series",
+  subtitle: "ชาร์จเร็ว กำลังสูง\nสำหรับธุรกิจสถานีชาร์จโดยเฉพาะ",
+  audience:
+    "ปั๊มน้ำมัน · จุดพักรถมอเตอร์เวย์ · ศูนย์บริการรถยนต์ · ลานจอดขนาดใหญ่",
+  // TODO: ADC Series photo from ChargeCore
+  image: undefined,
+  primary: { label: "ดูรายละเอียด", href: "/products#dc-fast" },
+  secondary: { label: "ปรึกษาโครงการ", href: "/quote?model=adc" },
 };
 
-// Kern-40 is the 7th model; it appears on /products only
+// 2-up grid — the two AC chargers
 export const gridTiles: ProductTileData[] = [
   {
-    kicker: "AC 7–22 kW",
-    title: "LPC",
-    subtitle: "เครื่องชาร์จติดผนัง รางวัล MUSE Design Awards",
+    kicker: "Smart Home AC · 7–22 kW",
+    title: "AC006",
+    subtitle: "ดีไซน์มินิมอล ติดตั้งง่าย\nสั่งงานและตั้งเวลาชาร์จผ่านแอป",
+    audience: "บ้านเดี่ยว · ทาวน์โฮม · ลานจอดส่วนตัว",
     image: {
-      src: `${IMG}/lpc.png`,
-      alt: "LPC Single Output Wall-Mounted Charger",
+      src: `${IMG}/ac006.png`,
+      alt: "ChargeCore AC006 Smart Wallbox",
       width: 800,
       height: 1000,
     },
-    primary: { label: "ดูเพิ่มเติม", href: "/products/lpc" },
-    secondary: { label: "สอบถาม", href: "/contact?topic=install" },
+    primary: { label: "ดูรายละเอียด", href: "/products#home" },
+    secondary: { label: "ขอใบเสนอราคา", href: "/quote?model=ac006" },
   },
   {
-    kicker: "AC 7–22 kW",
+    kicker: "Commercial AC · 7–43 kW",
     title: "AC002",
-    subtitle: "แบบตั้งพื้น สำหรับลานจอดคอนโดและอาคารสำนักงาน",
+    subtitle:
+      "ติดผนังหรือตั้งพื้น\nกันน้ำกันฝุ่น IP54\nรองรับชำระเงินผ่านมือถือ",
+    audience: "อาคารสำนักงาน · คอนโด · โรงแรม · ห้างสรรพสินค้า",
     image: {
       src: `${IMG}/ac002.png`,
-      alt: "AC002 Floor Stand EV Charging Station",
+      alt: "ChargeCore AC002 Floor Stand & Wall Mount",
       width: 800,
       height: 1000,
     },
-    primary: { label: "ดูเพิ่มเติม", href: "/products/ac002" },
-    secondary: { label: "สอบถาม", href: "/contact?topic=project" },
+    primary: { label: "ดูรายละเอียด", href: "/products#commercial" },
+    secondary: { label: "ขอใบเสนอราคา", href: "/quote?model=ac002" },
+  },
+];
+
+// TODO: product photos for both accessories
+export const accessoryCards: AccessoryCardData[] = [
+  {
+    kicker: "อุปกรณ์เสริม",
+    title: "Home Load Balancer",
+    body: "จัดการโหลดไฟอัตโนมัติ ป้องกันไฟตกหรือไฟกระชากขณะชาร์จ",
+    link: { label: "ดูรายละเอียด", href: "/products#accessories" },
   },
   {
-    kicker: "Fast DC 60 kW",
-    title: "Coremini 60",
-    subtitle: "ชาร์จเร็วเต็มกำลัง ในพื้นที่จอดรถที่จำกัด",
-    image: {
-      src: `${IMG}/coremini-60.png`,
-      alt: "Coremini 60kW Fast DC Charging Station",
-      width: 800,
-      height: 1000,
-    },
-    primary: { label: "ดูเพิ่มเติม", href: "/products/coremini-60" },
-    secondary: { label: "สอบถาม", href: "/contact?topic=project" },
-  },
-  {
-    kicker: "Fast DC 120–180 kW",
-    title: "Core 120–180",
-    subtitle: "สำหรับสถานีชาร์จสาธารณะและปั๊มน้ำมัน",
-    image: {
-      src: `${IMG}/core-120-180.jpg`,
-      alt: "Core 120kW-180kW Fast DC Charging Station",
-      width: 800,
-      height: 1000,
-    },
-    primary: { label: "ดูเพิ่มเติม", href: "/products/core-120-180" },
-    secondary: { label: "สอบถาม", href: "/contact?topic=project" },
+    kicker: "อุปกรณ์เสริม",
+    title: "EVCC Controller",
+    body: "ระบบสื่อสารให้รถเข้ากับมาตรฐานการชาร์จของแต่ละพื้นที่",
+    link: { label: "ดูรายละเอียด", href: "/products#accessories" },
   },
 ];
 
 export const productsLink: LinkField = {
-  label: "ดูสินค้าทั้งหมด 7 รุ่น",
+  label: "ดูสินค้าทั้งหมด",
   href: "/products",
 };
 

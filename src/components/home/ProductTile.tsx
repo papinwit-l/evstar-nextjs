@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { Button } from "@/components/shared/Button";
+import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { Phrases } from "@/components/shared/Phrases";
 import { cn } from "@/lib/utils";
 import type { ProductTileData } from "@/types/home";
@@ -80,6 +81,17 @@ export function ProductTile({
         <Phrases text={data.subtitle} />
       </p>
 
+      {data.audience && (
+        <p
+          className={cn(
+            "mt-3.5 text-[0.84rem]",
+            tone === "dark" ? "text-inverse-muted" : "text-text-muted",
+          )}
+        >
+          {data.audience}
+        </p>
+      )}
+
       <div className="mt-[22px] flex flex-wrap justify-center gap-3.5">
         <Button
           href={data.primary.href}
@@ -103,16 +115,24 @@ export function ProductTile({
       {children}
 
       <div className="mt-auto flex w-full justify-center pt-8">
-        <Image
-          src={data.image.src}
-          alt={data.image.alt}
-          width={data.image.width}
-          height={data.image.height}
-          sizes="(min-width: 1024px) 480px, 80vw"
-          loading={variant === "hero" ? "eager" : "lazy"}
-          fetchPriority={variant === "hero" ? "high" : "auto"}
-          className={cn("h-auto w-auto object-contain", s.image)}
-        />
+        {data.image ? (
+          <Image
+            src={data.image.src}
+            alt={data.image.alt}
+            width={data.image.width}
+            height={data.image.height}
+            sizes="(min-width: 1024px) 480px, 80vw"
+            loading={variant === "hero" ? "eager" : "lazy"}
+            fetchPriority={variant === "hero" ? "high" : "auto"}
+            className={cn("h-auto w-auto object-contain", s.image)}
+          />
+        ) : (
+          <ImagePlaceholder
+            label={`ภาพสินค้า: ${data.title}`}
+            tone={tone}
+            className="h-80 w-[min(280px,70%)] rounded-b-none"
+          />
+        )}
       </div>
     </section>
   );

@@ -15,9 +15,20 @@ export type ProductTileData = {
   title: string;
   /** Same "\n" phrase breaks as the title */
   subtitle: string;
-  image: Media;
+  /** Who it suits, e.g. "บ้านเดี่ยว · ทาวน์โฮม" — shown under the subtitle */
+  audience?: string;
+  /** Optional: a missing photo shows a placeholder in dev, nothing in production */
+  image?: Media;
   primary: LinkField;
   secondary?: LinkField;
+};
+
+export type AccessoryCardData = {
+  kicker?: string;
+  title: string;
+  body: string;
+  link: LinkField;
+  image?: Media;
 };
 
 /** Everything the home page reads from its own WP page (ACF fields). */
@@ -37,8 +48,10 @@ export type HomePageData = {
   hero: HeroData;
   /** Black full-width tile under the hero */
   featured: ProductTileData;
-  /** 2×2 grid; keep an even count so the grid has no gap */
+  /** 2-up grid of AC chargers; keep an even count so the grid has no gap */
   grid: ProductTileData[];
+  /** Small cards under the tiles (Home Load Balancer, EVCC) */
+  accessories: AccessoryCardData[];
   /** Link under the grid, e.g. "ดูสินค้าทั้งหมด 7 รุ่น" */
   productsLink: LinkField;
   compare: CompareData;
