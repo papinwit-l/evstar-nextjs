@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { CategorySection } from "@/components/products/CategorySection";
 import { CategoryNav } from "@/components/products/CategoryNav";
 import { ProductsHero } from "@/components/products/ProductsHero";
+import { CtaSection } from "@/components/shared/CtaSection";
 import { getProductsPage } from "@/lib/api/products";
 
 export const metadata: Metadata = {
@@ -16,7 +18,15 @@ export default async function ProductsPage() {
     <>
       <ProductsHero title={data.title} lead={data.lead} />
       <CategoryNav categories={data.categories} />
-      {/* next: one section per category */}
+      {data.categories.map((category, i) => (
+        <CategorySection
+          key={category.id}
+          category={category}
+          alt={i % 2 === 1}
+        />
+      ))}
+
+      <CtaSection data={data.cta} />
     </>
   );
 }

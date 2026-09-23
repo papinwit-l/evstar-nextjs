@@ -1,3 +1,4 @@
+import type { CtaData } from "@/types/common";
 import type { ProductsPageData } from "@/types/products";
 
 const IMG = "/images/products";
@@ -6,6 +7,14 @@ const IMG = "/images/products";
  * Content from the client's product document.
  * TODO: full spec tables from ChargeCore datasheets; photos for both accessories.
  */
+const productsCta: CtaData = {
+  title: "ไม่แน่ใจว่ารุ่นไหนเหมาะกับคุณ",
+  lead: "บอกประเภทสถานที่และการใช้งาน\nทีมงานช่วยเลือกรุ่นและประเมินหน้างานให้",
+  primary: { label: "ขอใบเสนอราคา", href: "/quote" },
+  secondary: { label: "ดูบริการติดตั้ง", href: "/services" },
+  showLine: true,
+};
+
 export const productsPage: ProductsPageData = {
   title: "เครื่องชาร์จ ChargeCore\nครบทุกการใช้งาน",
   lead: "ตั้งแต่ติดผนังที่บ้าน\nไปจนถึงสถานีชาร์จเร็ว 240 kW",
@@ -133,4 +142,5 @@ export const productsPage: ProductsPageData = {
       ],
     },
   ],
+  cta: productsCta,
 };
