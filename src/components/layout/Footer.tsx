@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
-import { footerColumns, legalLinks } from "@/lib/site";
+import { company, footerColumns, legalLinks } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-surface-dim text-[0.76rem] leading-normal text-text-muted">
       <Container className="pb-7 pt-9">
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
           {footerColumns.map((col) => (
             <div key={col.title}>
               <h2 className="mb-2.5 text-[0.76rem] font-semibold text-text">
@@ -31,7 +31,9 @@ export function Footer() {
         </div>
 
         <div className="mt-8 flex flex-wrap justify-between gap-3 border-t border-border-strong pt-4">
-          <p>© {year} EV Star สงวนลิขสิทธิ์</p>
+          <p>
+            © {year} {company.nameTh}
+          </p>
           <ul className="flex">
             {legalLinks.map((link, i) => (
               <li
