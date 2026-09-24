@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CookieSettingsButton } from "@/components/layout/CookieSettingsButton";
 import { Container } from "@/components/shared/Container";
 import { company, footerColumns, legalLinks } from "@/lib/site";
 
@@ -35,12 +36,13 @@ export function Footer() {
             © {year} {company.nameTh}
           </p>
           <ul className="flex">
+            <li>
+              <CookieSettingsButton />
+            </li>
             {legalLinks.map((link, i) => (
               <li
                 key={link.href}
-                className={
-                  i > 0 ? "ml-2.5 border-l border-border-strong pl-2.5" : ""
-                }
+                className="ml-2.5 border-l border-border-strong pl-2.5"
               >
                 <Link
                   href={link.href}
