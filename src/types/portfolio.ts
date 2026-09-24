@@ -3,9 +3,11 @@
  * (gallery, location, charger model, optional customer review).
  */
 
-import type { Media } from "@/types/common";
+import type { CtaData, Media } from "@/types/common";
 
 export type CaseCardData = {
+  /** Filter key on /portfolio, e.g. "house" — matches PortfolioFilter.value */
+  filter?: string;
   /** Project or site name */
   title: string;
   /** Site type + model, e.g. "บ้านเดี่ยว · AC006" */
@@ -28,4 +30,17 @@ export type PortfolioPreviewData = {
   title: string;
   cases: CaseCardData[];
   review?: ReviewData;
+};
+
+export type PortfolioFilter = {
+  value: string;
+  label: string;
+};
+
+export type PortfolioPageData = {
+  title: string;
+  lead?: string;
+  filters: PortfolioFilter[];
+  cases: CaseCardData[];
+  cta: CtaData;
 };
