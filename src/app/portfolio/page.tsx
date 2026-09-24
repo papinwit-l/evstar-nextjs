@@ -43,7 +43,7 @@ export default async function PortfolioPage({
             <ul className="mt-9 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
               {cases.map((item, i) => (
                 <li key={`${item.title}-${item.type}-${i}`}>
-                  <CaseCard item={item} headingLevel="h2" />
+                  <CaseCard item={item} headingLevel="h2" zoomable />
                 </li>
               ))}
             </ul>
