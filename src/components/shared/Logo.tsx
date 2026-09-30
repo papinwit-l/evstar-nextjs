@@ -10,9 +10,6 @@ type LogoProps = {
 
 /**
  * Client logo, rebuilt as a real SVG: the star was traced from the Canva
- * export's bitmap, the wordmark is the original vector paths.
- * TODO: ask the client for the designer's vector file and a compact lockup —
- * in this one the wordmark is small next to the star at header sizes.
  */
 export function Logo({ variant = "default", className = "" }: LogoProps) {
   const src =
