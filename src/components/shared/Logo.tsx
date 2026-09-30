@@ -1,18 +1,39 @@
+import Image from "next/image";
 import Link from "next/link";
+import { company } from "@/lib/site";
 
 type LogoProps = {
+  /** light = for dark backgrounds (white wordmark) */
+  variant?: "default" | "light";
   className?: string;
 };
 
-/** Text wordmark until the client supplies the SVG logo. */
-export function Logo({ className = "" }: LogoProps) {
+/**
+ * Client logo, rebuilt as a real SVG: the star was traced from the Canva
+ * export's bitmap, the wordmark is the original vector paths.
+ * TODO: ask the client for the designer's vector file and a compact lockup —
+ * in this one the wordmark is small next to the star at header sizes.
+ */
+export function Logo({ variant = "default", className = "" }: LogoProps) {
+  const src =
+    variant === "light"
+      ? "/images/logo/evstar-logo-light.svg"
+      : "/images/logo/evstar-logo.svg";
+
   return (
     <Link
       href="/"
-      aria-label="EV Star หน้าแรก"
-      className={`flex items-baseline gap-[0.34em] text-[1.16rem] font-semibold tracking-[-0.03em] text-text ${className}`}
+      aria-label={`${company.nameEn} หน้าแรก`}
+      className={`shrink-0 ${className}`}
     >
-      EV<span className="text-accent">STAR</span>
+      <Image
+        src={src}
+        alt={company.nameEn}
+        width={1364}
+        height={662}
+        priority
+        className="h-10 w-auto"
+      />
     </Link>
   );
 }
