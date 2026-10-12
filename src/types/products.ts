@@ -1,6 +1,6 @@
 /**
  * Products page. In WordPress: a "product" post type with a category
- * taxonomy (home / commercial / dc-fast / accessories).
+ * taxonomy (dc-fast / ac / accessories).
  */
 
 import type { CtaData, LinkField, Media } from "@/types/common";
@@ -11,8 +11,10 @@ export type SpecRow = {
 };
 
 export type ProductDetail = {
-  /** Model name, e.g. "AC006" */
+  /** Model code, e.g. "AC006", "ADC002" */
   name: string;
+  /** Manufacturer, e.g. "ChargeCore" — most products are ChargeCore, not all */
+  brand?: string;
   /** Short line above the name, e.g. "Smart Home AC · 7–22 kW" */
   kicker?: string;
   tagline: string;
@@ -26,7 +28,7 @@ export type ProductDetail = {
 };
 
 export type ProductCategory = {
-  /** Anchor id — the home page links to /products#home etc. */
+  /** Anchor id — the home page links to /products#dc-fast etc. */
   id: string;
   /** Short label for the category nav */
   label: string;

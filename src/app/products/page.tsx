@@ -8,7 +8,7 @@ import { getProductsPage } from "@/lib/api/products";
 export const metadata: Metadata = {
   title: "สินค้า",
   description:
-    "เครื่องชาร์จรถยนต์ไฟฟ้า ChargeCore ทั้ง AC สำหรับบ้านและธุรกิจ, DC Fast Charger 60–240 kW และอุปกรณ์เสริม จำหน่ายและติดตั้งโดย EVSTAR SOLUTIONS",
+    "เครื่องชาร์จรถยนต์ไฟฟ้า DC Fast Charger 30–360 kW และ AC สำหรับบ้านและธุรกิจ สินค้าหลักจาก ChargeCore จำหน่ายและติดตั้งโดย EVSTAR SOLUTIONS",
 };
 
 export default async function ProductsPage() {

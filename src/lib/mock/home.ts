@@ -27,24 +27,24 @@ export const heroTile: HeroData = {
   },
   primary: { label: "ขอใบเสนอราคาติดตั้ง", href: "/quote" },
   secondary: { label: "ดูรุ่นสินค้า ChargeCore", href: "/products" },
-  chargeLine: { label: "AC และ DC", value: "7 – 240 kW" },
+  chargeLine: { label: "DC และ AC", value: "7 – 240 kW" },
 };
 
-// Dark tile — DC fast charging
+// Dark tile — the lead product
 export const featuredTile: ProductTileData = {
-  kicker: "DC Fast Charger · 60–240 kW",
-  title: "ADC Series",
+  kicker: "DC Fast Charger · 120–180 kW",
+  title: "ADC002",
   subtitle: "ชาร์จเร็ว กำลังสูง\nสำหรับธุรกิจสถานีชาร์จโดยเฉพาะ",
   audience:
     "ปั๊มน้ำมัน · จุดพักรถมอเตอร์เวย์ · ศูนย์บริการรถยนต์ · ลานจอดขนาดใหญ่",
   image: {
-    src: `${IMG}/adc.png`,
-    alt: "ChargeCore ADC Series DC Fast Charger",
-    width: 1000,
-    height: 1000,
+    src: `${IMG}/core-120-180.jpg`,
+    alt: "ChargeCore ADC002 Core 120–180 kW Fast DC Charging Station",
+    width: 800,
+    height: 800,
   },
   primary: { label: "ดูรายละเอียด", href: "/products#dc-fast" },
-  secondary: { label: "ปรึกษาโครงการ", href: "/quote?model=adc" },
+  secondary: { label: "ปรึกษาโครงการ", href: "/quote?model=adc002" },
 };
 
 // 2-up grid — the two AC chargers
@@ -60,7 +60,7 @@ export const gridTiles: ProductTileData[] = [
       width: 800,
       height: 1000,
     },
-    primary: { label: "ดูรายละเอียด", href: "/products#home" },
+    primary: { label: "ดูรายละเอียด", href: "/products#ac" },
     secondary: { label: "ขอใบเสนอราคา", href: "/quote?model=ac006" },
   },
   {
@@ -75,7 +75,7 @@ export const gridTiles: ProductTileData[] = [
       width: 800,
       height: 1000,
     },
-    primary: { label: "ดูรายละเอียด", href: "/products#commercial" },
+    primary: { label: "ดูรายละเอียด", href: "/products#ac" },
     secondary: { label: "ขอใบเสนอราคา", href: "/quote?model=ac002" },
   },
 ];

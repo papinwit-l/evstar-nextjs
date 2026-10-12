@@ -105,12 +105,22 @@ export function QuoteForm({ defaults }: { defaults: QuoteDefaults }) {
 
       <fieldset className="grid gap-3">
         <Legend step={3}>รุ่นที่สนใจ</Legend>
-        <OptionCards
-          name="model"
-          options={chargerModels}
-          defaultValue={defaults.model}
-          columns="sm:grid-cols-2"
-        />
+        <FormField id="model" label="เลือกรุ่น" error={state.errors.model}>
+          <select
+            id="model"
+            name="model"
+            defaultValue={defaults.model ?? ""}
+            className={controlClass}
+            aria-invalid={Boolean(state.errors.model)}
+          >
+            <option value="">ยังไม่ระบุ</option>
+            {chargerModels.map((model) => (
+              <option key={model.value} value={model.value}>
+                {model.label}
+              </option>
+            ))}
+          </select>
+        </FormField>
       </fieldset>
 
       <fieldset className="grid gap-5">
