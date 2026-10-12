@@ -24,8 +24,9 @@ export default async function HomePage() {
       {/* Apple-style stacked tiles with a 12px gap between them */}
       <div className="grid gap-3 pt-3">
         <HeroSection data={home.hero} />
-        <ProductGrid items={home.grid} />
+        {/* DC first: it is the lead product */}
         <ProductTile data={home.featured} variant="dark" />
+        <ProductGrid items={home.grid} />
         <AccessoryCards items={home.accessories} />
       </div>
 

@@ -41,9 +41,8 @@ export const footerColumns: FooterColumn[] = [
   {
     title: "สินค้า",
     links: [
-      { label: "Home AC Charger", href: "/products#home" },
-      { label: "Commercial AC Charger", href: "/products#commercial" },
       { label: "DC Fast Charger", href: "/products#dc-fast" },
+      { label: "AC Charger", href: "/products#ac" },
       { label: "อุปกรณ์เสริม", href: "/products#accessories" },
     ],
   },

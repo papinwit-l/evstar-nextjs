@@ -45,6 +45,11 @@ export function ProductBlock({ product, reversed }: ProductBlockProps) {
           </p>
         )}
         <h3 className="mt-1.5 text-[clamp(1.8rem,3vw,2.4rem)] font-semibold leading-[1.15] tracking-[-0.02em]">
+          {product.brand && (
+            <span className="block text-[0.95rem] font-medium tracking-normal text-text-muted">
+              {product.brand}
+            </span>
+          )}
           {product.name}
         </h3>
         <p className="mt-2 text-[1.1rem] text-text-muted text-pretty">
