@@ -13,30 +13,41 @@ type ProductBlockProps = {
 
 /** One charger: photo on one side, details on the other. Stacks below lg. */
 export function ProductBlock({ product, reversed }: ProductBlockProps) {
+  // No photo in production → drop the panel instead of showing an empty grey box
+  const showMedia =
+    Boolean(product.image) || process.env.NODE_ENV !== "production";
+
   return (
-    <article className="grid items-center gap-[clamp(28px,5vw,72px)] lg:grid-cols-2">
-      <div
-        className={cn(
-          "flex items-center justify-center rounded-[18px] bg-surface-dim p-8",
-          reversed && "lg:order-2",
-        )}
-      >
-        {product.image ? (
-          <Image
-            src={product.image.src}
-            alt={product.image.alt}
-            width={product.image.width}
-            height={product.image.height}
-            sizes="(min-width: 1024px) 45vw, 90vw"
-            className="h-auto max-h-[420px] w-auto object-contain mix-blend-multiply"
-          />
-        ) : (
-          <ImagePlaceholder
-            label={`ภาพสินค้า: ${product.name}`}
-            className="aspect-square w-full max-w-[320px]"
-          />
-        )}
-      </div>
+    <article
+      className={cn(
+        "grid items-center gap-[clamp(28px,5vw,72px)]",
+        showMedia && "lg:grid-cols-2",
+      )}
+    >
+      {showMedia && (
+        <div
+          className={cn(
+            "flex items-center justify-center rounded-[18px] bg-surface-dim p-8",
+            reversed && "lg:order-2",
+          )}
+        >
+          {product.image ? (
+            <Image
+              src={product.image.src}
+              alt={product.image.alt}
+              width={product.image.width}
+              height={product.image.height}
+              sizes="(min-width: 1024px) 45vw, 90vw"
+              className="h-auto max-h-[420px] w-auto object-contain mix-blend-multiply"
+            />
+          ) : (
+            <ImagePlaceholder
+              label={`ภาพสินค้า: ${product.name}`}
+              className="aspect-square w-full max-w-[320px]"
+            />
+          )}
+        </div>
+      )}
 
       <div>
         {product.kicker && (

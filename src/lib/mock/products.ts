@@ -116,9 +116,15 @@ export const productsPage: ProductsPageData = {
           brand: "ChargeCore",
           kicker: "DC Ultra-Fast · 240/360 kW",
           tagline: "ตู้ชาร์จกำลังสูงพิเศษ สำหรับสถานีชาร์จขนาดใหญ่",
-          // TODO: features, specs and photo
+          // TODO: features and specs (photo: run download-product-images.ps1)
           features: ["กำลังชาร์จ 240 kW และ 360 kW"],
           audience: "สถานีชาร์จขนาดใหญ่ · รถเชิงพาณิชย์",
+          image: {
+            src: `${IMG}/haipawa.jpg`,
+            alt: "ChargeCore Haipawa-240/360 Fast DC Charger",
+            width: 800,
+            height: 800,
+          },
           cta: { label: "ปรึกษาโครงการ", href: "/quote?model=haipawa" },
         },
         {
@@ -126,12 +132,18 @@ export const productsPage: ProductsPageData = {
           brand: "ChargeCore",
           kicker: "DC Split Type · 250A",
           tagline: "ระบบแยกตู้จ่ายไฟกับตู้ควบคุม ระบายความร้อนด้วยอากาศ",
-          // TODO: features, specs and photo
+          // TODO: features and specs (photo: run download-product-images.ps1)
           features: [
             "แบบ Split Type แยกตู้จ่ายไฟออกจากตู้ควบคุม",
             "ระบายความร้อนด้วยอากาศ (Air cooling)",
           ],
           audience: "สถานีชาร์จที่มีข้อจำกัดด้านพื้นที่",
+          image: {
+            src: `${IMG}/nuclue-250a.png`,
+            alt: "ChargeCore Nuclue-Verde-250A Split Type Charging Station",
+            width: 800,
+            height: 800,
+          },
           cta: { label: "ปรึกษาโครงการ", href: "/quote?model=nuclue250a" },
         },
         {
@@ -178,8 +190,14 @@ export const productsPage: ProductsPageData = {
           brand: "ChargeCore",
           kicker: "Fast DC",
           tagline: "ตู้ชาร์จ DC สำหรับงานเชิงพาณิชย์",
-          // TODO: power rating, features, specs and photo
+          // TODO: power rating, features and specs (photo: run download-product-images.ps1)
           features: [],
+          image: {
+            src: `${IMG}/bdc.png`,
+            alt: "ChargeCore BDC Fast DC EV Charger",
+            width: 800,
+            height: 800,
+          },
           cta: { label: "สอบถามเพิ่มเติม", href: "/quote?model=bdc" },
         },
       ],
