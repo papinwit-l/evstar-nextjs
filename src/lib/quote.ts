@@ -21,15 +21,15 @@ export const meterSizes = [
 /** Full catalogue — DC first, matching the products page */
 export const chargerModels = [
   { value: "adc002", label: "ADC002 — DC Fast 120–180 kW" },
-  { value: "core240", label: "Core Series 240 — DC 240 kW" },
+  { value: "core240", label: "Core Series 240 — DC 160–240 kW" },
   { value: "adc", label: "ADC — DC Fast 60–240 kW" },
   { value: "haipawa", label: "Haipawa-240/360 — DC 240/360 kW" },
   { value: "nuclue250a", label: "Nuclue-Verde-250A — DC Split Type" },
-  { value: "coremini60", label: "Coremini 60 — DC 60 kW" },
-  { value: "kern40", label: "Kern-40 — DC 30/40 kW" },
+  { value: "coremini60", label: "Coremini 60/80 — DC 60/80 kW" },
+  { value: "kern40", label: "Kern-30/40 — DC 30/40 kW" },
   { value: "bdc", label: "BDC — DC Fast" },
-  { value: "ac002", label: "AC002 — AC 7–43 kW" },
   { value: "ac006", label: "AC006 — AC 7–22 kW (บ้าน)" },
+  { value: "ac002", label: "AC002 — AC 7–43 kW" },
   { value: "ac003", label: "AC003 (LPC) — AC ติดผนัง" },
   { value: "recommend", label: "ให้ทีมงานแนะนำ" },
 ] as const;

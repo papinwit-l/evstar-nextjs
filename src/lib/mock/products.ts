@@ -41,7 +41,8 @@ export const productsPage: ProductsPageData = {
           features: [
             "รองรับ ISO 15118 / DIN 70121 และ OCPP 1.6J (อัปเกรดเป็น 2.0 ได้)",
             "Dynamic Load Balancing จ่ายไฟให้รถหลายคันพร้อมกัน",
-            "จอสัมผัส LCD 7 นิ้ว รองรับ RFID และเครื่องรูดบัตร (ออปชัน)",
+            "จอสัมผัส LCD 10.1 นิ้ว พร้อมจอแสดงผลขนาด 21.5 นิ้ว รองรับ RFID และเครื่องรูดบัตร (ออปชัน)",
+            "รองรับการทำ Link & Loop feature",
             "สั่งงานผ่านแอป พร้อมระบบจัดเก็บสายชาร์จ",
           ],
           specs: [
@@ -62,21 +63,22 @@ export const productsPage: ProductsPageData = {
         {
           name: "Core Series 240",
           brand: "ChargeCore",
-          kicker: "DC High-Power · 240 kW",
+          kicker: "DC High-Power · 160–240 kW",
           tagline: "ตู้ชาร์จกำลังสูงสุดในกลุ่ม สำหรับสถานีชาร์จสาธารณะ",
           // TODO: full specs from the ChargeCore datasheet
           features: [
-            "กำลังชาร์จสูงสุด 240 kW",
+            "กำลังชาร์จ 160 – 240 kW",
             "รองรับการใช้งานต่อเนื่องในสถานีชาร์จ",
+            "รองรับการทำ Link & Loop feature",
           ],
           specs: [
-            { label: "กำลังไฟ", value: "240 kW (DC)" },
+            { label: "กำลังไฟ", value: "160 – 240 kW (DC)" },
             { label: "การติดตั้ง", value: "ตั้งพื้น" },
           ],
           audience: "สถานีบริการน้ำมัน · จุดพักรถมอเตอร์เวย์ · ลานจอดขนาดใหญ่",
           image: {
             src: `${IMG}/core-240.png`,
-            alt: "ChargeCore Core Series 240 kW DC High-Power Charging Pile",
+            alt: "ChargeCore Core Series 160–240 kW DC High-Power Charging Pile",
             width: 800,
             height: 1000,
           },
@@ -133,35 +135,39 @@ export const productsPage: ProductsPageData = {
           cta: { label: "ปรึกษาโครงการ", href: "/quote?model=nuclue250a" },
         },
         {
-          name: "Coremini 60",
+          name: "Coremini 60/80",
           brand: "ChargeCore",
-          kicker: "Fast DC · 60 kW",
+          kicker: "Fast DC · 60/80 kW",
           tagline: "ตู้ชาร์จเร็วขนาดกะทัดรัด สำหรับพื้นที่เชิงพาณิชย์",
           // TODO: full specs from the ChargeCore datasheet
           features: [
-            "กำลังชาร์จ 60 kW",
+            "กำลังชาร์จ 60 kW และ 80 kW",
             "ขนาดกะทัดรัด ติดตั้งในพื้นที่จำกัดได้",
+            "รองรับการทำ Link & Loop feature",
           ],
           audience: "ห้างสรรพสินค้า · โรงแรม · ลานจอดรถ",
           image: {
             src: `${IMG}/coremini-60.png`,
-            alt: "ChargeCore Coremini 60 kW Fast DC Charging Station",
+            alt: "ChargeCore Coremini 60/80 kW Fast DC Charging Station",
             width: 800,
             height: 1000,
           },
           cta: { label: "ขอใบเสนอราคา", href: "/quote?model=coremini60" },
         },
         {
-          name: "Kern-40",
+          name: "Kern-30/40",
           brand: "ChargeCore",
           kicker: "Fast DC · 30/40 kW",
           tagline: "ตู้ชาร์จ DC ขนาดเล็ก เริ่มต้นสถานีชาร์จได้ในงบที่จำกัด",
           // TODO: full specs from the ChargeCore datasheet
-          features: ["กำลังชาร์จ 30 kW และ 40 kW"],
+          features: [
+            "กำลังชาร์จ 30 kW และ 40 kW",
+            "รองรับการทำ Link & Loop feature",
+          ],
           audience: "ศูนย์บริการรถยนต์ · สำนักงาน · ร้านค้า",
           image: {
             src: `${IMG}/kern-40.jpg`,
-            alt: "ChargeCore Kern-40 Electric Vehicle Charging Station",
+            alt: "ChargeCore Kern-30/40 Electric Vehicle Charging Station",
             width: 800,
             height: 800,
           },
@@ -184,31 +190,6 @@ export const productsPage: ProductsPageData = {
       title: "เครื่องชาร์จ AC",
       lead: "สำหรับบ้าน คอนโด และอาคารสำนักงาน ชาร์จข้ามคืนหรือระหว่างวัน",
       products: [
-        {
-          name: "AC002",
-          brand: "ChargeCore",
-          kicker: "Commercial AC · 7–43 kW",
-          tagline: "ติดผนังหรือตั้งพื้น โครงสร้างทนทานระดับ IP54",
-          features: [
-            "รองรับการชำระเงินผ่านมือถือ",
-            "เช็กสถานะการใช้งานแบบ Real-time",
-            "ใช้งานร่วมกับระบบจัดการหลังบ้าน (OCPP)",
-          ],
-          specs: [
-            { label: "กำลังไฟ", value: "7 – 43 kW (AC)" },
-            { label: "การติดตั้ง", value: "ติดผนัง หรือตั้งพื้น" },
-            { label: "การป้องกัน", value: "IP54" },
-            { label: "มาตรฐาน", value: "CE, TÜV" },
-          ],
-          audience: "อาคารสำนักงาน · คอนโดมิเนียม · โรงแรม · ห้างสรรพสินค้า",
-          image: {
-            src: `${IMG}/ac002.png`,
-            alt: "ChargeCore AC002 Floor Stand EV Charging Station",
-            width: 800,
-            height: 1000,
-          },
-          cta: { label: "ขอใบเสนอราคา", href: "/quote?model=ac002" },
-        },
         {
           name: "AC006",
           brand: "ChargeCore",
@@ -233,6 +214,31 @@ export const productsPage: ProductsPageData = {
             height: 1000,
           },
           cta: { label: "ขอใบเสนอราคา", href: "/quote?model=ac006" },
+        },
+        {
+          name: "AC002",
+          brand: "ChargeCore",
+          kicker: "Commercial AC · 7–43 kW",
+          tagline: "ติดผนังหรือตั้งพื้น โครงสร้างทนทานระดับ IP54",
+          features: [
+            "รองรับการชำระเงินผ่านมือถือ",
+            "เช็กสถานะการใช้งานแบบ Real-time",
+            "ใช้งานร่วมกับระบบจัดการหลังบ้าน (OCPP)",
+          ],
+          specs: [
+            { label: "กำลังไฟ", value: "7 – 43 kW (AC)" },
+            { label: "การติดตั้ง", value: "ติดผนัง หรือตั้งพื้น" },
+            { label: "การป้องกัน", value: "IP54" },
+            { label: "มาตรฐาน", value: "CE, TÜV" },
+          ],
+          audience: "อาคารสำนักงาน · คอนโดมิเนียม · โรงแรม · ห้างสรรพสินค้า",
+          image: {
+            src: `${IMG}/ac002.png`,
+            alt: "ChargeCore AC002 Floor Stand EV Charging Station",
+            width: 800,
+            height: 1000,
+          },
+          cta: { label: "ขอใบเสนอราคา", href: "/quote?model=ac002" },
         },
         {
           name: "AC003 (LPC)",

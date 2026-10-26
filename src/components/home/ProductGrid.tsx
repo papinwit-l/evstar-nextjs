@@ -8,7 +8,7 @@ export function ProductGrid({ items }: { items: ProductTileData[] }) {
   return (
     <div className="grid gap-3 md:grid-cols-2">
       {items.map((item) => (
-        <ProductTile key={item.primary.href} data={item} variant="grid" />
+        <ProductTile key={item.title} data={item} variant="grid" />
       ))}
     </div>
   );
