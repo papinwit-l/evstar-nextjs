@@ -2,11 +2,13 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/shared/Button";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { contact } from "@/lib/site";
+import { getSiteSettings } from "@/lib/api/settings";
 import type { CtaData } from "@/types/common";
 
 /** Closing call-to-action on a grey band. Used on Home, About, and later pages. */
-export function CtaSection({ data }: { data: CtaData }) {
+export async function CtaSection({ data }: { data: CtaData }) {
+  const { contact } = await getSiteSettings();
+
   return (
     <section
       aria-labelledby="cta-title"

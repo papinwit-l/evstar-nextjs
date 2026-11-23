@@ -5,12 +5,16 @@ import { Container } from "@/components/shared/Container";
 import { CtaSection } from "@/components/shared/CtaSection";
 import { PageHero } from "@/components/shared/PageHero";
 import { getPortfolioPage } from "@/lib/api/portfolio";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "ผลงานการติดตั้ง",
-  description:
-    "ตัวอย่างงานติดตั้งเครื่องชาร์จรถยนต์ไฟฟ้า ChargeCore โดย EVSTAR SOLUTIONS ทั้งบ้าน คอนโด อาคารสำนักงาน โรงงาน และสถานีชาร์จ",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await getPortfolioPage();
+  return seoMetadata(data.seo, {
+    title: "ผลงานการติดตั้ง",
+    description:
+      "ตัวอย่างงานติดตั้งเครื่องชาร์จรถยนต์ไฟฟ้า ChargeCore โดย EVSTAR SOLUTIONS ทั้งบ้าน คอนโด อาคารสำนักงาน โรงงาน และสถานีชาร์จ",
+  });
+}
 
 type PortfolioPageProps = {
   searchParams: Promise<{ type?: string }>;

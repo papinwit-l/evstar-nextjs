@@ -1,6 +1,8 @@
 /**
  * Quote form options and validation, shared by the form and the server action.
- * TODO: confirm the meter sizes and model list with the client.
+ * With WordPress enabled, meter sizes come from ตั้งค่าเว็บไซต์ and the model
+ * list from published products (see getQuoteOptions in src/lib/api/quote.ts);
+ * the lists below are the fallback when WordPress is not configured.
  */
 
 export const propertyTypes = [
@@ -18,7 +20,7 @@ export const meterSizes = [
   { value: "unknown", label: "ไม่ทราบ / ให้ทีมงานตรวจสอบ" },
 ] as const;
 
-/** Full catalogue — DC first, matching the products page */
+/** Fallback model list — DC first, matching the products page */
 export const chargerModels = [
   { value: "adc002", label: "ADC002 — DC Fast 120–180 kW" },
   { value: "core240", label: "Core Series 240 — DC 160–240 kW" },
@@ -63,7 +65,17 @@ const isOption = (options: readonly { value: string }[], value: string) =>
 /** Thai mobile/landline: 9–10 digits, spaces and dashes allowed. */
 const phonePattern = /^0\d{1,2}[-\s]?\d{3}[-\s]?\d{3,4}$/;
 
-export function validateQuote(form: FormData): FieldErrors {
+type Option = { value: string };
+
+export type QuoteValidationOptions = {
+  chargerModels: readonly Option[];
+  meterSizes: readonly Option[];
+};
+
+export function validateQuote(
+  form: FormData,
+  options: QuoteValidationOptions = { chargerModels, meterSizes },
+): FieldErrors {
   const errors: FieldErrors = {};
   const get = (key: string) => String(form.get(key) ?? "").trim();
 
@@ -73,11 +85,11 @@ export function validateQuote(form: FormData): FieldErrors {
     errors.propertyType = "ตัวเลือกไม่ถูกต้อง";
 
   const meterSize = get("meterSize");
-  if (meterSize && !isOption(meterSizes, meterSize))
+  if (meterSize && !isOption(options.meterSizes, meterSize))
     errors.meterSize = "ตัวเลือกไม่ถูกต้อง";
 
   const model = get("model");
-  if (model && !isOption(chargerModels, model))
+  if (model && !isOption(options.chargerModels, model))
     errors.model = "ตัวเลือกไม่ถูกต้อง";
 
   const name = get("name");

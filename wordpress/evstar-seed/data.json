@@ -1,0 +1,815 @@
+{
+  "generatedAt": "2026-11-23T14:11:11.778Z",
+  "categories": [
+    {
+      "slug": "dc-fast",
+      "name": "DC Fast Charger",
+      "fields": {
+        "navLabel": "DC Fast Charger",
+        "title": "สถานีชาร์จความเร็วสูง (DC)",
+        "lead": "ชาร์จพลังงานสูง รวดเร็ว สำหรับสถานีชาร์จและธุรกิจเชิงพาณิชย์",
+        "order": 1
+      }
+    },
+    {
+      "slug": "ac",
+      "name": "AC Charger",
+      "fields": {
+        "navLabel": "AC Charger",
+        "title": "เครื่องชาร์จ AC",
+        "lead": "สำหรับบ้าน คอนโด และอาคารสำนักงาน ชาร์จข้ามคืนหรือระหว่างวัน",
+        "order": 2
+      }
+    },
+    {
+      "slug": "accessories",
+      "name": "อุปกรณ์เสริม",
+      "fields": {
+        "navLabel": "อุปกรณ์เสริม",
+        "title": "ระบบจัดการพลังงานและอุปกรณ์เสริม",
+        "lead": "",
+        "order": 3
+      }
+    }
+  ],
+  "products": [
+    {
+      "title": "ADC002",
+      "slug": "adc002",
+      "category": "dc-fast",
+      "menuOrder": 1,
+      "image": {
+        "file": "core-120-180.jpg",
+        "alt": "ChargeCore ADC002 Core 120–180 kW Fast DC Charging Station"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "DC Fast Charger · 120–180 kW",
+        "tagline": "Core 120–180 kW รางวัล MUSE Design Awards ดีไซน์แบบโมดูลาร์ ดูแลรักษาง่าย",
+        "features": [
+          {
+            "text": "รองรับ ISO 15118 / DIN 70121 และ OCPP 1.6J (อัปเกรดเป็น 2.0 ได้)"
+          },
+          {
+            "text": "Dynamic Load Balancing จ่ายไฟให้รถหลายคันพร้อมกัน"
+          },
+          {
+            "text": "จอสัมผัส LCD 10.1 นิ้ว พร้อมจอแสดงผลขนาด 21.5 นิ้ว รองรับ RFID และเครื่องรูดบัตร (ออปชัน)"
+          },
+          {
+            "text": "รองรับการทำ Link & Loop feature"
+          },
+          {
+            "text": "สั่งงานผ่านแอป พร้อมระบบจัดเก็บสายชาร์จ"
+          }
+        ],
+        "specs": [
+          {
+            "label": "กำลังไฟ",
+            "value": "120 – 180 kW (DC)"
+          },
+          {
+            "label": "การติดตั้ง",
+            "value": "ตั้งพื้น"
+          },
+          {
+            "label": "การป้องกัน",
+            "value": "IP55"
+          },
+          {
+            "label": "มาตรฐาน",
+            "value": "CE, UL, TÜV (SECC)"
+          }
+        ],
+        "audience": "สถานีชาร์จ · ลานจอดเชิงพาณิชย์ · อาคารสำนักงาน",
+        "ctaType": "quote"
+      }
+    },
+    {
+      "title": "Core Series 240",
+      "slug": "core240",
+      "category": "dc-fast",
+      "menuOrder": 2,
+      "image": {
+        "file": "core-240.png",
+        "alt": "ChargeCore Core Series 160–240 kW DC High-Power Charging Pile"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "DC High-Power · 160–240 kW",
+        "tagline": "ตู้ชาร์จกำลังสูงสุดในกลุ่ม สำหรับสถานีชาร์จสาธารณะ",
+        "features": [
+          {
+            "text": "กำลังชาร์จ 160 – 240 kW"
+          },
+          {
+            "text": "รองรับการใช้งานต่อเนื่องในสถานีชาร์จ"
+          },
+          {
+            "text": "รองรับการทำ Link & Loop feature"
+          }
+        ],
+        "specs": [
+          {
+            "label": "กำลังไฟ",
+            "value": "160 – 240 kW (DC)"
+          },
+          {
+            "label": "การติดตั้ง",
+            "value": "ตั้งพื้น"
+          }
+        ],
+        "audience": "สถานีบริการน้ำมัน · จุดพักรถมอเตอร์เวย์ · ลานจอดขนาดใหญ่",
+        "ctaType": "consult"
+      }
+    },
+    {
+      "title": "ADC",
+      "slug": "adc",
+      "category": "dc-fast",
+      "menuOrder": 3,
+      "image": {
+        "file": "adc.png",
+        "alt": "ChargeCore ADC Fast DC Electric Vehicle Station"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "DC Fast Charger · 60–240 kW",
+        "tagline": "ตู้ชาร์จ DC แบบโมดูลาร์ เลือกกำลังไฟได้ตามขนาดโครงการ",
+        "features": [
+          {
+            "text": "รองรับ ISO 15118 / DIN 70121 และ OCPP 1.6J"
+          },
+          {
+            "text": "Load balancing ภายในสถานีชาร์จ"
+          },
+          {
+            "text": "จอสัมผัส 7 นิ้ว รองรับ RFID และบัตรเครดิต"
+          },
+          {
+            "text": "สั่งงานผ่านแอป"
+          }
+        ],
+        "specs": [
+          {
+            "label": "กำลังไฟ",
+            "value": "60 – 240 kW (DC)"
+          },
+          {
+            "label": "การติดตั้ง",
+            "value": "ตั้งพื้น"
+          },
+          {
+            "label": "การป้องกัน",
+            "value": "IP54"
+          },
+          {
+            "label": "มาตรฐาน",
+            "value": "CE, TÜV (SECC)"
+          }
+        ],
+        "audience": "สถานีชาร์จ · ลานจอดเชิงพาณิชย์ · อาคารสำนักงาน",
+        "ctaType": "consult"
+      }
+    },
+    {
+      "title": "Haipawa-240/360",
+      "slug": "haipawa",
+      "category": "dc-fast",
+      "menuOrder": 4,
+      "image": {
+        "file": "haipawa.jpg",
+        "alt": "ChargeCore Haipawa-240/360 Fast DC Charger"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "DC Ultra-Fast · 240/360 kW",
+        "tagline": "ตู้ชาร์จกำลังสูงพิเศษ สำหรับสถานีชาร์จขนาดใหญ่",
+        "features": [
+          {
+            "text": "กำลังชาร์จ 240 kW และ 360 kW"
+          }
+        ],
+        "specs": [],
+        "audience": "สถานีชาร์จขนาดใหญ่ · รถเชิงพาณิชย์",
+        "ctaType": "consult"
+      }
+    },
+    {
+      "title": "Nuclue-Verde-250A",
+      "slug": "nuclue250a",
+      "category": "dc-fast",
+      "menuOrder": 5,
+      "image": {
+        "file": "nuclue-250a.png",
+        "alt": "ChargeCore Nuclue-Verde-250A Split Type Charging Station"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "DC Split Type · 250A",
+        "tagline": "ระบบแยกตู้จ่ายไฟกับตู้ควบคุม ระบายความร้อนด้วยอากาศ",
+        "features": [
+          {
+            "text": "แบบ Split Type แยกตู้จ่ายไฟออกจากตู้ควบคุม"
+          },
+          {
+            "text": "ระบายความร้อนด้วยอากาศ (Air cooling)"
+          }
+        ],
+        "specs": [],
+        "audience": "สถานีชาร์จที่มีข้อจำกัดด้านพื้นที่",
+        "ctaType": "consult"
+      }
+    },
+    {
+      "title": "Coremini 60/80",
+      "slug": "coremini60",
+      "category": "dc-fast",
+      "menuOrder": 6,
+      "image": {
+        "file": "coremini-60.png",
+        "alt": "ChargeCore Coremini 60/80 kW Fast DC Charging Station"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "Fast DC · 60/80 kW",
+        "tagline": "ตู้ชาร์จเร็วขนาดกะทัดรัด สำหรับพื้นที่เชิงพาณิชย์",
+        "features": [
+          {
+            "text": "กำลังชาร์จ 60 kW และ 80 kW"
+          },
+          {
+            "text": "ขนาดกะทัดรัด ติดตั้งในพื้นที่จำกัดได้"
+          },
+          {
+            "text": "รองรับการทำ Link & Loop feature"
+          }
+        ],
+        "specs": [],
+        "audience": "ห้างสรรพสินค้า · โรงแรม · ลานจอดรถ",
+        "ctaType": "quote"
+      }
+    },
+    {
+      "title": "Kern-30/40",
+      "slug": "kern40",
+      "category": "dc-fast",
+      "menuOrder": 7,
+      "image": {
+        "file": "kern-40.jpg",
+        "alt": "ChargeCore Kern-30/40 Electric Vehicle Charging Station"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "Fast DC · 30/40 kW",
+        "tagline": "ตู้ชาร์จ DC ขนาดเล็ก เริ่มต้นสถานีชาร์จได้ในงบที่จำกัด",
+        "features": [
+          {
+            "text": "กำลังชาร์จ 30 kW และ 40 kW"
+          },
+          {
+            "text": "รองรับการทำ Link & Loop feature"
+          }
+        ],
+        "specs": [],
+        "audience": "ศูนย์บริการรถยนต์ · สำนักงาน · ร้านค้า",
+        "ctaType": "quote"
+      }
+    },
+    {
+      "title": "BDC",
+      "slug": "bdc",
+      "category": "dc-fast",
+      "menuOrder": 8,
+      "image": {
+        "file": "bdc.png",
+        "alt": "ChargeCore BDC Fast DC EV Charger"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "Fast DC",
+        "tagline": "ตู้ชาร์จ DC สำหรับงานเชิงพาณิชย์",
+        "features": [],
+        "specs": [],
+        "audience": "",
+        "ctaType": "ask"
+      }
+    },
+    {
+      "title": "AC006",
+      "slug": "ac006",
+      "category": "ac",
+      "menuOrder": 101,
+      "image": {
+        "file": "ac006.png",
+        "alt": "ChargeCore AC006 Smart AC EV Home Charger"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "Smart Home AC · 7–22 kW",
+        "tagline": "Smart Wallbox ดีไซน์มินิมอล น้ำหนักเบา ติดตั้งง่าย",
+        "features": [
+          {
+            "text": "รองรับหัวชาร์จ Type 2 (และ Type 1, GB/T)"
+          },
+          {
+            "text": "สั่งการผ่านแอปมือถือ ตั้งเวลาชาร์จล่วงหน้า"
+          },
+          {
+            "text": "อัปเดตซอฟต์แวร์แบบ OTA"
+          }
+        ],
+        "specs": [
+          {
+            "label": "กำลังไฟ",
+            "value": "7 – 22 kW (AC)"
+          },
+          {
+            "label": "หัวชาร์จ",
+            "value": "Type 2, Type 1, GB/T"
+          },
+          {
+            "label": "การติดตั้ง",
+            "value": "ติดผนัง"
+          },
+          {
+            "label": "มาตรฐาน",
+            "value": "CE, TÜV"
+          }
+        ],
+        "audience": "บ้านเดี่ยว · ทาวน์โฮม · ลานจอดรถส่วนตัว",
+        "ctaType": "quote"
+      }
+    },
+    {
+      "title": "AC002",
+      "slug": "ac002",
+      "category": "ac",
+      "menuOrder": 102,
+      "image": {
+        "file": "ac002.png",
+        "alt": "ChargeCore AC002 Floor Stand EV Charging Station"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "Commercial AC · 7–43 kW",
+        "tagline": "ติดผนังหรือตั้งพื้น โครงสร้างทนทานระดับ IP54",
+        "features": [
+          {
+            "text": "รองรับการชำระเงินผ่านมือถือ"
+          },
+          {
+            "text": "เช็กสถานะการใช้งานแบบ Real-time"
+          },
+          {
+            "text": "ใช้งานร่วมกับระบบจัดการหลังบ้าน (OCPP)"
+          }
+        ],
+        "specs": [
+          {
+            "label": "กำลังไฟ",
+            "value": "7 – 43 kW (AC)"
+          },
+          {
+            "label": "การติดตั้ง",
+            "value": "ติดผนัง หรือตั้งพื้น"
+          },
+          {
+            "label": "การป้องกัน",
+            "value": "IP54"
+          },
+          {
+            "label": "มาตรฐาน",
+            "value": "CE, TÜV"
+          }
+        ],
+        "audience": "อาคารสำนักงาน · คอนโดมิเนียม · โรงแรม · ห้างสรรพสินค้า",
+        "ctaType": "quote"
+      }
+    },
+    {
+      "title": "AC003 (LPC)",
+      "slug": "ac003",
+      "category": "ac",
+      "menuOrder": 103,
+      "image": {
+        "file": "lpc.png",
+        "alt": "ChargeCore AC003 LPC Single Output Wall-Mounted Charger"
+      },
+      "fields": {
+        "brand": "ChargeCore",
+        "kicker": "Wall-Mounted AC",
+        "tagline": "LPC รางวัล MUSE Design Awards แบบติดผนัง หัวชาร์จเดี่ยว",
+        "features": [
+          {
+            "text": "ติดผนัง หัวชาร์จเดี่ยว (Single Output)"
+          }
+        ],
+        "specs": [],
+        "audience": "บ้าน · คอนโด · อาคารสำนักงาน",
+        "ctaType": "quote"
+      }
+    },
+    {
+      "title": "Home Load Balancer",
+      "slug": "home-load-balancer",
+      "category": "accessories",
+      "menuOrder": 201,
+      "image": null,
+      "fields": {
+        "brand": "",
+        "kicker": "",
+        "tagline": "ระบบจัดการโหลดไฟฟ้าอัจฉริยะ",
+        "features": [
+          {
+            "text": "ป้องกันไฟตกหรือไฟกระชากในบ้านขณะชาร์จ"
+          },
+          {
+            "text": "แบ่งกำลังไฟให้อุปกรณ์อื่นอัตโนมัติ"
+          }
+        ],
+        "specs": [],
+        "audience": "",
+        "ctaType": "ask"
+      }
+    },
+    {
+      "title": "EVCC Communication Controller",
+      "slug": "evcc-communication-controller",
+      "category": "accessories",
+      "menuOrder": 202,
+      "image": null,
+      "fields": {
+        "brand": "",
+        "kicker": "",
+        "tagline": "ระบบสื่อสารอัจฉริยะ",
+        "features": [
+          {
+            "text": "รองรับมาตรฐานการชาร์จของแต่ละพื้นที่"
+          },
+          {
+            "text": "เชื่อมต่อรถกับเครื่องชาร์จได้หลากหลายรุ่น"
+          }
+        ],
+        "specs": [],
+        "audience": "",
+        "ctaType": "ask"
+      }
+    }
+  ],
+  "pages": {
+    "home": {
+      "hero": {
+        "kicker": "EVSTAR SOLUTIONS × ChargeCore",
+        "title": "ตัวแทนจำหน่ายและติดตั้ง\nสถานีชาร์จ ChargeCore\nอย่างเป็นทางการ",
+        "subtitle": "บริการครบวงจร\nตั้งแต่บ้านพักอาศัย\nถึงสถานีชาร์จเชิงพาณิชย์\nได้มาตรฐาน CE และ TÜV",
+        "image": {
+          "file": "ac006.png",
+          "alt": "เครื่องชาร์จ ChargeCore AC006"
+        },
+        "primary": {
+          "label": "ขอใบเสนอราคาติดตั้ง",
+          "href": "/quote"
+        },
+        "secondary": {
+          "label": "ดูรุ่นสินค้า ChargeCore",
+          "href": "/products"
+        },
+        "chargeLine": {
+          "label": "DC และ AC",
+          "value": "7 – 240 kW"
+        }
+      },
+      "featuredProduct": {
+        "product": "adc002",
+        "subtitleOverride": "ชาร์จเร็ว กำลังสูง\nสำหรับธุรกิจสถานีชาร์จโดยเฉพาะ",
+        "imageOverride": null
+      },
+      "gridProducts": [
+        {
+          "product": "ac006",
+          "subtitleOverride": "ดีไซน์มินิมอล ติดตั้งง่าย\nสั่งงานและตั้งเวลาชาร์จผ่านแอป",
+          "imageOverride": null
+        },
+        {
+          "product": "ac002",
+          "subtitleOverride": "ติดผนังหรือตั้งพื้น\nกันน้ำกันฝุ่น IP54\nรองรับชำระเงินผ่านมือถือ",
+          "imageOverride": null
+        }
+      ],
+      "accessories": [
+        {
+          "product": "home-load-balancer",
+          "subtitleOverride": "จัดการโหลดไฟอัตโนมัติ ป้องกันไฟตกหรือไฟกระชากขณะชาร์จ",
+          "imageOverride": null
+        },
+        {
+          "product": "evcc-communication-controller",
+          "subtitleOverride": "ระบบสื่อสารให้รถเข้ากับมาตรฐานการชาร์จของแต่ละพื้นที่",
+          "imageOverride": null
+        }
+      ],
+      "productsLink": {
+        "label": "ดูสินค้าทั้งหมด",
+        "href": "/products"
+      },
+      "highlights": {
+        "title": "ทำไมต้อง\nEVSTAR × ChargeCore",
+        "lead": "",
+        "items": [
+          {
+            "value": "100%",
+            "title": "Official Partner",
+            "body": "สินค้าของแท้จาก ChargeCore Global พร้อมรับประกันตรงจากศูนย์"
+          },
+          {
+            "value": "OCPP",
+            "title": "Smart Technology",
+            "body": "สั่งงานผ่านแอป เช็กสถานะแบบ Real-time อัปเดตซอฟต์แวร์แบบ OTA"
+          },
+          {
+            "value": "CE · TÜV",
+            "title": "Safety & Standard",
+            "body": "ผ่านมาตรฐานความปลอดภัยระดับโลก กันน้ำกันฝุ่น ติดตั้งได้ทั้งในร่มและกลางแจ้ง"
+          },
+          {
+            "value": "One-Stop",
+            "title": "บริการครบวงจร",
+            "body": "สำรวจหน้างาน ขออนุญาตการไฟฟ้า ติดตั้งโดยช่างผู้เชี่ยวชาญ และดูแลหลังการขาย"
+          }
+        ],
+        "link": null
+      },
+      "process": {
+        "title": "ขั้นตอนการทำงาน",
+        "lead": "ตั้งแต่โทรหาเรา จนถึงวันที่เครื่องชาร์จพร้อมใช้งาน",
+        "steps": [
+          {
+            "title": "ปรึกษา",
+            "body": "แจ้งประเภทสถานที่และรุ่นที่สนใจ ทีมงานช่วยประเมินเบื้องต้น"
+          },
+          {
+            "title": "สำรวจหน้างาน",
+            "body": "ตรวจตู้ไฟ ขนาดมิเตอร์ และจุดติดตั้ง พร้อมเสนอราคา"
+          },
+          {
+            "title": "ติดตั้ง",
+            "body": "เดินสายเมนและติดตั้งตามมาตรฐานวิศวกรรม MEA และ PEA"
+          },
+          {
+            "title": "ส่งมอบ",
+            "body": "ทดสอบการชาร์จ สอนใช้งานแอป และเริ่มการรับประกัน"
+          }
+        ],
+        "link": {
+          "label": "ดูบริการทั้งหมด",
+          "href": "/services"
+        }
+      },
+      "finalCta": {
+        "title": "พร้อมติดตั้ง\nเครื่องชาร์จแล้วหรือยัง",
+        "lead": "ส่งข้อมูลหน้างานเบื้องต้น\nทีมงานประเมินและเสนอราคาให้",
+        "primary": {
+          "label": "ขอใบเสนอราคา",
+          "href": "/quote"
+        },
+        "secondary": {
+          "label": "จองคิวสำรวจหน้างาน",
+          "href": "/quote?intent=survey"
+        },
+        "showLine": 1
+      }
+    },
+    "products": {
+      "title": "เครื่องชาร์จรถยนต์ไฟฟ้า\nครบทุกการใช้งาน",
+      "lead": "สินค้าหลักจาก ChargeCore\nตั้งแต่สถานีชาร์จเร็ว 240 kW\nไปจนถึงเครื่องติดผนังที่บ้าน",
+      "cta": {
+        "title": "ไม่แน่ใจว่ารุ่นไหนเหมาะกับคุณ",
+        "lead": "บอกประเภทสถานที่และการใช้งาน\nทีมงานช่วยเลือกรุ่นและประเมินหน้างานให้",
+        "primary": {
+          "label": "ขอใบเสนอราคา",
+          "href": "/quote"
+        },
+        "secondary": {
+          "label": "ดูบริการติดตั้ง",
+          "href": "/services"
+        },
+        "showLine": 1
+      }
+    },
+    "services": {
+      "title": "ติดตั้งและดูแล\nโดยทีมวิศวกรคนไทย",
+      "lead": "ตั้งแต่ออกแบบระบบ ขออนุญาตการไฟฟ้า\nจนถึงบำรุงรักษาหลังติดตั้ง",
+      "services": [
+        {
+          "icon": "install",
+          "anchor": "",
+          "title": "Installation & Engineering",
+          "body": "ออกแบบและติดตั้งสถานีชาร์จ ChargeCore ตามมาตรฐานวิศวกรรม MEA และ PEA",
+          "bullets": [
+            {
+              "text": "สำรวจหน้างานและประเมินระบบไฟฟ้าเดิม"
+            },
+            {
+              "text": "ขออนุญาตการไฟฟ้าและขยายเขตมิเตอร์"
+            },
+            {
+              "text": "เดินสายเมนและติดตั้งอุปกรณ์ป้องกันครบชุด"
+            }
+          ]
+        },
+        {
+          "icon": "platform",
+          "anchor": "",
+          "title": "Platform Integration",
+          "body": "เซ็ตอัประบบจัดการหลังบ้าน OCPP สำหรับธุรกิจที่ต้องการเก็บค่าบริการ",
+          "bullets": [
+            {
+              "text": "ตั้งค่าอัตราค่าบริการและวิธีชำระเงิน"
+            },
+            {
+              "text": "ดูสถานะและรายงานการใช้งานแบบ Real-time"
+            },
+            {
+              "text": "รองรับการอัปเดตซอฟต์แวร์แบบ OTA"
+            }
+          ]
+        },
+        {
+          "icon": "maintenance",
+          "anchor": "",
+          "title": "Maintenance & Care",
+          "body": "ตรวจเช็กสภาพเครื่องชาร์จ (PM) และแก้ไขปัญหาด้วยอะไหล่แท้จาก ChargeCore",
+          "bullets": [
+            {
+              "text": "ตรวจเช็กตามรอบและทดสอบระบบป้องกัน"
+            },
+            {
+              "text": "อะไหล่แท้จาก ChargeCore"
+            },
+            {
+              "text": "ทีมงานดูแลตลอดอายุการใช้งาน"
+            }
+          ]
+        }
+      ],
+      "process": {
+        "title": "ขั้นตอนการทำงาน",
+        "lead": "ตั้งแต่โทรหาเรา\nจนถึงวันที่เครื่องชาร์จพร้อมใช้งาน",
+        "steps": [
+          {
+            "title": "ปรึกษา",
+            "body": "แจ้งประเภทสถานที่ รุ่นที่สนใจ และลักษณะการใช้งาน ทีมงานช่วยประเมินความเหมาะสมและงบประมาณเบื้องต้นให้ก่อนออกหน้างาน"
+          },
+          {
+            "title": "สำรวจหน้างาน",
+            "body": "ตรวจตู้ไฟ ขนาดมิเตอร์ ระยะเดินสาย และจุดติดตั้งจริง จากนั้นสรุปแบบและเสนอราคาพร้อมรายละเอียดอุปกรณ์"
+          },
+          {
+            "title": "ติดตั้ง",
+            "body": "เดินสายเมน ติดตั้งอุปกรณ์ป้องกัน และยึดเครื่องชาร์จตามมาตรฐานวิศวกรรม MEA และ PEA โดยช่างผู้เชี่ยวชาญ"
+          },
+          {
+            "title": "ส่งมอบ",
+            "body": "ทดสอบการชาร์จจริง สอนใช้งานแอปและระบบหลังบ้าน พร้อมเริ่มระยะเวลารับประกันและบริการหลังการขาย"
+          }
+        ],
+        "link": null
+      },
+      "cta": {
+        "title": "เริ่มจากการสำรวจหน้างาน",
+        "lead": "ส่งข้อมูลเบื้องต้น\nทีมงานติดต่อกลับเพื่อนัดวันสำรวจ",
+        "primary": {
+          "label": "จองคิวสำรวจหน้างาน",
+          "href": "/quote?intent=survey"
+        },
+        "secondary": {
+          "label": "ดูสินค้าทั้งหมด",
+          "href": "/products"
+        },
+        "showLine": 1
+      }
+    },
+    "about": {
+      "hero": {
+        "kicker": "EVSTAR SOLUTIONS × ChargeCore",
+        "title": "Driving the Future\nwith ChargeCore",
+        "lead": "ผู้เชี่ยวชาญด้านระบบสถานีอัดประจุไฟฟ้า ตัวแทนจำหน่ายอย่างเป็นทางการของ ChargeCore Global ในประเทศไทย",
+        "image": null
+      },
+      "story": {
+        "kicker": "เรื่องราวของเรา",
+        "title": "ยกระดับโครงสร้างพื้นฐาน\nด้าน EV ของไทย",
+        "paragraphs": [
+          {
+            "text": "บริษัท อีวีสตาร์ โซลูชั่น จำกัด คือผู้เชี่ยวชาญด้านระบบสถานีอัดประจุไฟฟ้า ที่มุ่งมั่นยกระดับโครงสร้างพื้นฐานด้าน EV ของประเทศไทย เราได้รับความไว้วางใจให้เป็นตัวแทนจำหน่ายอย่างเป็นทางการของ ChargeCore Global แบรนด์เทคโนโลยีสถานีชาร์จชั้นนำระดับโลก"
+          },
+          {
+            "text": "ความร่วมมือระหว่าง EVSTAR x ChargeCore ทำให้เราส่งมอบเครื่องชาร์จที่ทันสมัยทั้ง AC และ DC Fast Charger ที่โดดเด่นด้านความอัจฉริยะและความปลอดภัย พร้อมบริการแบบครบวงจร โดยทีมวิศวกรคนไทยที่มีประสบการณ์"
+          }
+        ],
+        "image": null
+      },
+      "why": {
+        "title": "แบรนด์ที่เราเลือกเป็นตัวแทน",
+        "lead": "ข้อมูลจาก ChargeCore Global",
+        "items": [
+          {
+            "value": "2015",
+            "title": "ประสบการณ์ระดับโลก",
+            "body": "พัฒนาเครื่องชาร์จมาตั้งแต่ปี 2015 ภายใต้ Nanjing PowerCore Technology"
+          },
+          {
+            "value": "50+",
+            "title": "ประเทศที่ส่งออก",
+            "body": "ใช้งานในเอเชียตะวันออกเฉียงใต้ ยุโรป และอเมริกาเหนือ"
+          },
+          {
+            "value": "TÜV · CE",
+            "title": "มาตรฐานสากล",
+            "body": "ผ่านการรับรองจาก TÜV Rheinland และ TÜV SÜD"
+          },
+          {
+            "value": "OCPP",
+            "title": "แพลตฟอร์มเปิด",
+            "body": "เชื่อมต่อระบบจัดการหลังบ้าน และอัปเดตซอฟต์แวร์แบบ OTA"
+          }
+        ],
+        "link": null
+      },
+      "cta": {
+        "title": "อยากร่วมงาน\nกับ EVSTAR",
+        "lead": "ติดตั้งเครื่องชาร์จที่บ้าน\nหรือวางระบบสถานีชาร์จสำหรับธุรกิจ",
+        "primary": {
+          "label": "ขอใบเสนอราคา",
+          "href": "/quote"
+        },
+        "secondary": {
+          "label": "ดูบริการทั้งหมด",
+          "href": "/services"
+        },
+        "showLine": 1
+      }
+    },
+    "portfolio": {
+      "title": "ผลงานการติดตั้ง",
+      "lead": "ตั้งแต่โรงรถที่บ้าน\nไปจนถึงสถานีชาร์จเชิงพาณิชย์",
+      "cta": {
+        "title": "อยากให้หน้างานของคุณ\nเป็นผลงานชิ้นต่อไป",
+        "lead": "ส่งข้อมูลเบื้องต้น\nทีมงานติดต่อกลับเพื่อนัดวันสำรวจ",
+        "primary": {
+          "label": "ขอใบเสนอราคา",
+          "href": "/quote"
+        },
+        "secondary": {
+          "label": "ดูบริการติดตั้ง",
+          "href": "/services"
+        },
+        "showLine": 1
+      }
+    },
+    "quote": {
+      "title": "ขอใบเสนอราคา",
+      "surveyTitle": "จองคิวสำรวจหน้างาน",
+      "lead": "กรอกข้อมูลเบื้องต้น ทีมงานจะติดต่อกลับเพื่อประเมินหน้างานและเสนอราคา",
+      "thankYou": ""
+    }
+  },
+  "privacyPolicy": {
+    "title": "นโยบายความเป็นส่วนตัว",
+    "content": "<!-- wp:paragraph -->\n<p>บริษัท อีวีสตาร์ โซลูชั่น จำกัด (\"เรา\") เคารพความเป็นส่วนตัวของผู้ใช้งานเว็บไซต์ และปฏิบัติตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA) นโยบายนี้อธิบายว่าเราเก็บข้อมูลใด นำไปใช้อย่างไร และท่านมีสิทธิอะไรบ้าง</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"anchor\":\"data\"} -->\n<h2 class=\"wp-block-heading\" id=\"data\">ข้อมูลที่เราเก็บรวบรวม</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>เราเก็บข้อมูลเท่าที่จำเป็นต่อการให้บริการ โดยส่วนใหญ่เป็นข้อมูลที่ท่านกรอกเองผ่านแบบฟอร์มขอใบเสนอราคา</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>ชื่อ เบอร์โทรศัพท์ อีเมล และ LINE ID</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ประเภทสถานที่ติดตั้ง ขนาดมิเตอร์ไฟฟ้า และพื้นที่ติดตั้ง</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>รุ่นเครื่องชาร์จที่สนใจ และรายละเอียดเพิ่มเติมที่ท่านแจ้ง</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ข้อมูลการใช้งานเว็บไซต์ เช่น หน้าที่เข้าชม ผ่านคุกกี้และเครื่องมือวิเคราะห์</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:heading {\"anchor\":\"purpose\"} -->\n<h2 class=\"wp-block-heading\" id=\"purpose\">วัตถุประสงค์ในการใช้ข้อมูล</h2>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>ติดต่อกลับเพื่อเสนอราคาและนัดหมายสำรวจหน้างาน</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ประเมินความเหมาะสมของระบบไฟฟ้าและรุ่นเครื่องชาร์จ</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ให้บริการติดตั้ง รับประกัน และบริการหลังการขาย</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ปรับปรุงเว็บไซต์และคุณภาพการให้บริการ</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:heading {\"anchor\":\"legal-basis\"} -->\n<h2 class=\"wp-block-heading\" id=\"legal-basis\">ฐานทางกฎหมาย</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>เราประมวลผลข้อมูลของท่านบนฐานความยินยอมที่ท่านให้ไว้เมื่อส่งแบบฟอร์ม ฐานสัญญาเมื่อมีการซื้อขายหรือติดตั้ง และฐานประโยชน์โดยชอบด้วยกฎหมายในการพัฒนาบริการของเรา</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"anchor\":\"sharing\"} -->\n<h2 class=\"wp-block-heading\" id=\"sharing\">การเปิดเผยข้อมูล</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>เราไม่ขายข้อมูลส่วนบุคคลของท่าน อาจมีการเปิดเผยเท่าที่จำเป็นให้แก่ทีมช่างผู้ติดตั้ง ผู้ให้บริการระบบที่เราใช้งาน เช่น ระบบอีเมลและระบบวิเคราะห์เว็บไซต์ หรือเมื่อกฎหมายกำหนด</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"anchor\":\"retention\"} -->\n<h2 class=\"wp-block-heading\" id=\"retention\">ระยะเวลาเก็บรักษา</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>เราเก็บข้อมูลไว้เท่าที่จำเป็นตามวัตถุประสงค์ข้างต้น หรือตามระยะเวลาที่กฎหมายกำหนด [ระบุระยะเวลา เช่น 2 ปีนับจากการติดต่อครั้งล่าสุด] จากนั้นจะลบหรือทำให้ไม่สามารถระบุตัวบุคคลได้</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"anchor\":\"rights\"} -->\n<h2 class=\"wp-block-heading\" id=\"rights\">สิทธิของเจ้าของข้อมูล</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>ภายใต้ PDPA ท่านมีสิทธิดังนี้ และสามารถใช้สิทธิได้โดยติดต่อเราตามช่องทางท้ายหน้านี้</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>ขอเข้าถึงและขอสำเนาข้อมูลของท่าน</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ขอแก้ไขข้อมูลให้ถูกต้องเป็นปัจจุบัน</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ขอลบหรือระงับการใช้ข้อมูล</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ถอนความยินยอมเมื่อใดก็ได้</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li>ร้องเรียนต่อคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:heading {\"anchor\":\"cookies\"} -->\n<h2 class=\"wp-block-heading\" id=\"cookies\">คุกกี้</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>เว็บไซต์ใช้คุกกี้ที่จำเป็นต่อการทำงานของเว็บไซต์ และคุกกี้เพื่อการวิเคราะห์ซึ่งช่วยให้เราเข้าใจการใช้งานภาพรวม ท่านสามารถเลือกยอมรับหรือปฏิเสธคุกกี้ที่ไม่จำเป็นได้จากแถบแจ้งเตือนคุกกี้ และเปลี่ยนการตั้งค่าได้ในภายหลังผ่านการตั้งค่าเบราว์เซอร์</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"anchor\":\"contact\"} -->\n<h2 class=\"wp-block-heading\" id=\"contact\">ติดต่อเรา</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>หากมีคำถามเกี่ยวกับนโยบายนี้ หรือต้องการใช้สิทธิของท่าน ติดต่อ บริษัท อีวีสตาร์ โซลูชั่น จำกัด โทร 02 000 0000 อีเมล info@example.com [ที่อยู่สำนักงาน]</p>\n<!-- /wp:paragraph -->"
+  },
+  "settings": {
+    "nameTh": "บริษัท อีวีสตาร์ โซลูชั่น จำกัด",
+    "nameEn": "EVSTAR SOLUTIONS CO., LTD.",
+    "phone": "02 000 0000",
+    "email": "info@example.com",
+    "lineUrl": "",
+    "address": "",
+    "openingHours": "",
+    "mapUrl": "",
+    "meterSizes": [
+      {
+        "value": "5-15",
+        "label": "5(15) แอมป์ 1 เฟส"
+      },
+      {
+        "value": "15-45",
+        "label": "15(45) แอมป์ 1 เฟส"
+      },
+      {
+        "value": "30-100",
+        "label": "30(100) แอมป์ 1 เฟส"
+      },
+      {
+        "value": "3phase",
+        "label": "3 เฟส"
+      },
+      {
+        "value": "unknown",
+        "label": "ไม่ทราบ / ให้ทีมงานตรวจสอบ"
+      }
+    ],
+    "responseTime": ""
+  }
+}

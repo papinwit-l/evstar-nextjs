@@ -2,7 +2,7 @@
  * Services page — mirror as ACF fields on the WP "Services" page.
  */
 
-import type { CtaData, StepsData } from "@/types/common";
+import type { CtaData, SeoData, StepsData } from "@/types/common";
 
 export type ServiceItem = {
   /** Anchor id, e.g. "install" */
@@ -20,4 +20,5 @@ export type ServicesPageData = {
   services: ServiceItem[];
   process: StepsData;
   cta: CtaData;
+  seo?: SeoData;
 };

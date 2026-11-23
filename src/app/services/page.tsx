@@ -4,12 +4,16 @@ import { CtaSection } from "@/components/shared/CtaSection";
 import { PageHero } from "@/components/shared/PageHero";
 import { StepsSection } from "@/components/shared/StepsSection";
 import { getServicesPage } from "@/lib/api/services";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "บริการ",
-  description:
-    "บริการออกแบบ ติดตั้ง และดูแลสถานีชาร์จ ChargeCore ตามมาตรฐาน MEA และ PEA พร้อมระบบ OCPP และบริการตรวจเช็กบำรุงรักษาโดย EVSTAR SOLUTIONS",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await getServicesPage();
+  return seoMetadata(data.seo, {
+    title: "บริการ",
+    description:
+      "บริการออกแบบ ติดตั้ง และดูแลสถานีชาร์จ ChargeCore ตามมาตรฐาน MEA และ PEA พร้อมระบบ OCPP และบริการตรวจเช็กบำรุงรักษาโดย EVSTAR SOLUTIONS",
+  });
+}
 
 export default async function ServicesPage() {
   const data = await getServicesPage();

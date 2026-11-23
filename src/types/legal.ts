@@ -18,3 +18,13 @@ export type LegalPageData = {
   intro?: string;
   sections: LegalSection[];
 };
+
+/** Privacy policy as rendered from the WordPress block editor. */
+export type LegalHtmlPage = {
+  title: string;
+  /** e.g. "ปรับปรุงล่าสุด 23 พฤศจิกายน 2569" */
+  updated?: string;
+  /** Block-editor HTML, filtered by WordPress (kses) on save */
+  html: string;
+  seo?: import("@/types/common").SeoData;
+};

@@ -1,10 +1,15 @@
 import Link from "next/link";
 import { CookieSettingsButton } from "@/components/layout/CookieSettingsButton";
 import { Container } from "@/components/shared/Container";
-import { company, footerColumns, legalLinks } from "@/lib/site";
+import { getFooterColumns, getSiteSettings } from "@/lib/api/settings";
+import { legalLinks } from "@/lib/site";
 
-export function Footer() {
+export async function Footer() {
   const year = new Date().getFullYear();
+  const [footerColumns, { company }] = await Promise.all([
+    getFooterColumns(),
+    getSiteSettings(),
+  ]);
 
   return (
     <footer className="border-t border-border bg-surface-dim text-[0.76rem] leading-normal text-text-muted">

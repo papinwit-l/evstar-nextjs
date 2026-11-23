@@ -1,5 +1,6 @@
 "use server";
 
+import { getQuoteOptions } from "@/lib/api/quote";
 import {
   initialQuoteState,
   validateQuote,
@@ -15,7 +16,8 @@ export async function submitQuote(
   _prev: QuoteFormState,
   form: FormData,
 ): Promise<QuoteFormState> {
-  const errors = validateQuote(form);
+  // Same lists the form showed: an unpublished model no longer validates
+  const errors = validateQuote(form, await getQuoteOptions());
 
   if (Object.keys(errors).length > 0) {
     return { status: "error", errors, message: "กรุณาตรวจสอบข้อมูลที่กรอก" };

@@ -1,10 +1,13 @@
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { contact } from "@/lib/site";
+import { getSiteSettings } from "@/lib/api/settings";
 
 const iconClass = "size-5 shrink-0 text-accent-text";
 
 /** "Prefer not to fill a form?" — the contact details that used to live on /contact. */
-export function QuoteContact() {
+export async function QuoteContact() {
+  const { contact } = await getSiteSettings();
+  const place = [contact.address, contact.openingHours].filter(Boolean).join("\n");
+
   return (
     <section
       id="contact"
@@ -37,9 +40,21 @@ export function QuoteContact() {
         </li>
         <li className="flex items-start gap-3">
           <MapPin size={20} strokeWidth={1.5} className={iconClass} />
-          {/* TODO: office address, opening hours, and a map link */}
-          <span className="text-text-muted">
-            [ที่อยู่สำนักงาน และเวลาทำการ]
+          <span className="whitespace-pre-line text-text-muted">
+            {place || "[ที่อยู่สำนักงาน และเวลาทำการ]"}
+            {contact.mapUrl && (
+              <>
+                {" "}
+                <a
+                  href={contact.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-text hover:underline"
+                >
+                  ดูแผนที่
+                </a>
+              </>
+            )}
           </span>
         </li>
       </ul>

@@ -4,10 +4,9 @@ import { useActionState } from "react";
 import { submitQuote } from "@/lib/actions/quote";
 import { controlClass, FormField } from "@/components/quote/FormField";
 import { OptionCards } from "@/components/quote/OptionCards";
+import type { QuoteOptions } from "@/lib/api/quote";
 import {
-  chargerModels,
   initialQuoteState,
-  meterSizes,
   propertyTypes,
   type QuoteDefaults,
 } from "@/lib/quote";
@@ -23,7 +22,16 @@ function Legend({ step, children }: { step: number; children: string }) {
   );
 }
 
-export function QuoteForm({ defaults }: { defaults: QuoteDefaults }) {
+type QuoteFormProps = {
+  defaults: QuoteDefaults;
+  /** Model and meter-size lists (from WordPress) */
+  options: QuoteOptions;
+  /** Message after a successful submit (from the CMS); empty → default text */
+  thankYou?: string;
+};
+
+export function QuoteForm({ defaults, options, thankYou }: QuoteFormProps) {
+  const { chargerModels, meterSizes } = options;
   const [state, formAction, pending] = useActionState(
     submitQuote,
     initialQuoteState,
@@ -35,9 +43,9 @@ export function QuoteForm({ defaults }: { defaults: QuoteDefaults }) {
         <h2 className="text-[1.6rem] font-semibold">
           ได้รับข้อมูลแล้ว ขอบคุณครับ
         </h2>
-        <p className="mx-auto mt-3 max-w-[40ch] text-text-muted text-pretty">
-          ทีมงานจะติดต่อกลับตามเบอร์ที่แจ้งไว้
-          หากต้องการส่งรูปตู้ไฟหรือจุดติดตั้งเพิ่มเติม ส่งทาง LINE ได้เลย
+        <p className="mx-auto mt-3 max-w-[40ch] whitespace-pre-line text-text-muted text-pretty">
+          {thankYou ||
+            "ทีมงานจะติดต่อกลับตามเบอร์ที่แจ้งไว้ หากต้องการส่งรูปตู้ไฟหรือจุดติดตั้งเพิ่มเติม ส่งทาง LINE ได้เลย"}
         </p>
       </div>
     );

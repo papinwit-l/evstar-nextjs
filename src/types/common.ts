@@ -54,3 +54,9 @@ export type HighlightsData = {
   items: Highlight[];
   link?: LinkField;
 };
+
+/** Per-page SEO fields from WordPress; empty fields fall back to the page's defaults. */
+export type SeoData = {
+  title?: string;
+  description?: string;
+};

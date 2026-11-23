@@ -3,7 +3,7 @@
  * taxonomy (dc-fast / ac / accessories).
  */
 
-import type { CtaData, LinkField, Media } from "@/types/common";
+import type { CtaData, LinkField, Media, SeoData } from "@/types/common";
 
 export type SpecRow = {
   label: string;
@@ -42,4 +42,5 @@ export type ProductsPageData = {
   lead: string;
   categories: ProductCategory[];
   cta: CtaData;
+  seo?: SeoData;
 };

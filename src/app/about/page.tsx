@@ -4,12 +4,16 @@ import { StorySection } from "@/components/about/StorySection";
 import { CtaSection } from "@/components/shared/CtaSection";
 import { HighlightsSection } from "@/components/shared/HighlightsSection";
 import { getAboutPage } from "@/lib/api/about";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "เกี่ยวกับเรา",
-  description:
-    "EVSTAR SOLUTIONS ตัวแทนจำหน่ายและติดตั้งสถานีชาร์จ ChargeCore อย่างเป็นทางการ พร้อมบริการครบวงจรโดยทีมวิศวกรคนไทย",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await getAboutPage();
+  return seoMetadata(data.seo, {
+    title: "เกี่ยวกับเรา",
+    description:
+      "EVSTAR SOLUTIONS ตัวแทนจำหน่ายและติดตั้งสถานีชาร์จ ChargeCore อย่างเป็นทางการ พร้อมบริการครบวงจรโดยทีมวิศวกรคนไทย",
+  });
+}
 
 export default async function AboutPage() {
   const about = await getAboutPage();

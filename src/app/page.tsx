@@ -9,6 +9,14 @@ import { CtaSection } from "@/components/shared/CtaSection";
 import { StepsSection } from "@/components/shared/StepsSection";
 import { getHomePage } from "@/lib/api/home";
 import { getPortfolioPreview } from "@/lib/api/portfolio";
+import { seoMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+/** Home uses the layout's default title unless SEO fields are filled in WordPress. */
+export async function generateMetadata(): Promise<Metadata> {
+  const home = await getHomePage();
+  return seoMetadata(home.seo, {});
+}
 
 export default async function HomePage() {
   // Independent sources → fetch in parallel.

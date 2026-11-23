@@ -3,7 +3,7 @@
  * (gallery, location, charger model, optional customer review).
  */
 
-import type { CtaData, Media } from "@/types/common";
+import type { CtaData, Media, SeoData } from "@/types/common";
 
 export type CaseCardData = {
   /** Filter key on /portfolio, e.g. "house" — matches PortfolioFilter.value */
@@ -43,4 +43,5 @@ export type PortfolioPageData = {
   filters: PortfolioFilter[];
   cases: CaseCardData[];
   cta: CtaData;
+  seo?: SeoData;
 };

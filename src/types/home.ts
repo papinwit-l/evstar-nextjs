@@ -5,6 +5,7 @@
 
 import type {
   CtaData,
+  SeoData,
   HighlightsData,
   LinkField,
   Media,
@@ -67,6 +68,7 @@ export type HomePageData = {
   /** Four-step process, linking to /services */
   process: StepsData;
   finalCta: FinalCtaData;
+  seo?: SeoData;
 };
 
 /** Kept as an alias so existing imports keep working. */

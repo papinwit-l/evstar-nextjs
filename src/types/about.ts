@@ -2,7 +2,7 @@
  * About page data shapes — mirror as ACF fields on the WP "About" page.
  */
 
-import type { CtaData, HighlightsData, Media } from "@/types/common";
+import type { CtaData, HighlightsData, Media, SeoData } from "@/types/common";
 
 export type AboutHeroData = {
   kicker?: string;
@@ -28,4 +28,5 @@ export type AboutPageData = {
   /** "Why ChargeCore" — facts about the brand they represent */
   why: HighlightsData;
   cta: CtaData;
+  seo?: SeoData;
 };
