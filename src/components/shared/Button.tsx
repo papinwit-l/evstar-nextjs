@@ -24,7 +24,8 @@ const variants = {
     dark: "bg-cta text-on-cta hover:bg-cta-hover",
   },
   outline: {
-    light: "border border-cta text-accent-text hover:bg-cta hover:text-on-cta",
+    light:
+      "border border-accent-text text-accent-text hover:border-cta hover:bg-cta hover:text-on-cta",
     dark: "border border-accent-on-dark text-accent-on-dark hover:bg-accent-on-dark hover:text-primary",
   },
   neutral: {

@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 /*
-  EV Star — design tokens (Tailwind v4)
+  EVSTAR — design tokens (Tailwind v4)
 
-  Guiding idea: a quiet, cool-grey canvas with ONE accent — EV orange.
-  Orange means "action or energy": CTAs, the charge line, active nav, focus.
-  If everything is orange, nothing is. Keep it under ~5% of any screen.
+  Guiding idea: a quiet, cool-grey canvas with ONE accent — gold, the same
+  #E19E00 as the star in the logo. Gold means "action or energy": CTAs, the
+  charge line, active nav, focus. Keep it under ~5% of any screen.
 
   Contrast notes (WCAG AA = 4.5:1 for body text, 3:1 for large text/UI):
-  - accent (#f26522) on white = 3.15:1 → fills, bars, icons, text ≥ 24px only
-  - accent-text (#ca4c0c) on white = 4.61:1 → any orange text below 24px
+  - accent (#e19e00) on white = 2.31:1 → fills, bars, dots, decoration only
+  - accent-text (#8f6300) on white = 5.31:1 → gold text, outlines, focus,
+    selected borders (anything that must be read or seen)
+  - Gold buttons use INK text, never white: #111214 on #e19e00 = 8.11:1
   - text-muted (#636368) passes on white, surface-dim and surface-deep
 */
 
@@ -21,28 +23,25 @@
   --color-primary-mid: #1d1d21; /* raised card / hover on dark */
   --color-primary-light: #3a3a40; /* borders & pill outlines on dark */
 
-  /* EV orange — CTAs, charge line, active states, focus ring */
-  --color-accent: #f26522; /* brand orange: fills, bars, underlines, large text */
-  --color-accent-hover: #ca4c0c; /* hover on accent fills */
-  --color-accent-text: #ca4c0c; /* small orange text on light bg (links, card kickers) */
-  --color-accent-on-dark: #f7843f; /* orange text on primary bg (7.4:1) */
-  --color-accent-pale: #ffe6d5; /* tags, badges, soft highlight bg */
-  --color-accent-dark: #a33a0c; /* pressed state, text on accent-pale */
-  --color-accent-subtle: rgba(242, 101, 34, 0.08); /* row/option hover tint */
+  /* Gold — CTAs, charge line, active states (matches the logo star) */
+  --color-accent: #e19e00; /* brand gold: fills, bars, underlines, decoration */
+  --color-accent-hover: #c48a00; /* hover on accent fills */
+  --color-accent-text: #8f6300; /* gold text, borders, focus on light bg (5.31:1) */
+  --color-accent-on-dark: #f2c14e; /* gold text on primary bg (11.2:1) */
+  --color-accent-pale: #fff4d6; /* tags, badges, soft highlight bg */
+  --color-accent-dark: #6b4a00; /* pressed state, text on accent-pale */
+  --color-accent-subtle: #fff7e0; /* selected option / filter bg */
   --color-accent-border: rgba(
-    242,
-    101,
-    34,
+    143,
+    99,
+    0,
     0.35
   ); /* selected card / input outline */
 
-  /* CTA — primary button. Pick ONE option, keep the others commented:
-     A) white on #ca4c0c  → passes AA, slightly deeper than logo orange (current)
-     B) white on #f26522  → matches logo, fails AA for body-size labels
-     C) ink on #f26522    → passes AA (5.9:1), brightest, less "Apple-like" */
-  --color-cta: #ca4c0c;
-  --color-cta-hover: #a33a0c;
-  --color-on-cta: #ffffff;
+  /* CTA — primary button: ink text on gold (8.11:1; 6.23:1 on hover) */
+  --color-cta: #e19e00;
+  --color-cta-hover: #c48a00;
+  --color-on-cta: #111214;
 
   /* Surface — page background, panels, cards */
   --color-surface: #ffffff; /* page bg */

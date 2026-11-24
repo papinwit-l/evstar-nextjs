@@ -33,7 +33,7 @@ export function OptionCards({
       {options.map((option) => (
         <label
           key={option.value}
-          className={`flex cursor-pointer items-center justify-center rounded-[14px] border px-4 py-3 text-center text-[0.95rem] transition-colors has-[:checked]:border-cta has-[:checked]:bg-accent-subtle has-[:checked]:font-medium has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-accent ${
+          className={`flex cursor-pointer items-center justify-center rounded-[14px] border px-4 py-3 text-center text-[0.95rem] transition-colors has-[:checked]:border-accent-text has-[:checked]:bg-accent-subtle has-[:checked]:font-medium has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-accent-text ${
             invalid ? "border-error" : "border-border-strong"
           }`}
         >

@@ -19,7 +19,7 @@ export type { HighlightsData };
 export type { LinkField, Media };
 
 export type ProductTileData = {
-  /** Small orange line above the title, e.g. "AC 7–22 kW" */
+  /** Small gold line above the title, e.g. "AC 7–22 kW" */
   kicker?: string;
   /** Line breaks ("\n", from an ACF textarea) mark where Thai phrases may wrap */
   title: string;

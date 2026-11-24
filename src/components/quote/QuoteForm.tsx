@@ -209,7 +209,7 @@ export function QuoteForm({ defaults, options, thankYou }: QuoteFormProps) {
             type="checkbox"
             name="consent"
             value="yes"
-            className="mt-1 size-4 shrink-0 accent-[var(--color-cta)]"
+            className="mt-1 size-4 shrink-0 accent-[var(--color-accent-text)]"
             aria-invalid={Boolean(state.errors.consent)}
           />
           <span>

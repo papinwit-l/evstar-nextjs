@@ -67,7 +67,7 @@ export function Header() {
 
         <Link
           href={headerCta.href}
-          className="ml-2 hidden whitespace-nowrap rounded-full bg-primary px-[17px] py-[7px] text-[0.88rem] font-medium text-on-primary transition-colors duration-150 hover:bg-cta lg:inline-block"
+          className="ml-2 hidden whitespace-nowrap rounded-full bg-primary px-[17px] py-[7px] text-[0.88rem] font-medium text-on-primary transition-colors duration-150 hover:bg-cta hover:text-on-cta lg:inline-block"
         >
           {headerCta.label}
         </Link>

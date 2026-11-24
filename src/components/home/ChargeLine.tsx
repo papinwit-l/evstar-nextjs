@@ -1,7 +1,7 @@
 import type { ChargeLineData } from "@/types/home";
 
 /**
- * Thin orange bar that fills once on load, like a charging indicator.
+ * Thin gold bar that fills once on load, like a charging indicator.
  * Decorative only — the same facts are in the hero copy.
  */
 export function ChargeLine({ label, value, detail }: ChargeLineData) {

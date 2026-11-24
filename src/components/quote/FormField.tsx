@@ -44,4 +44,4 @@ export function FormField({
 }
 
 export const controlClass =
-  "w-full rounded-[14px] border border-border-strong bg-surface px-4 py-3 text-[1rem] text-text placeholder:text-text-subtle focus:border-accent focus:outline-none aria-[invalid=true]:border-error";
+  "w-full rounded-[14px] border border-border-strong bg-surface px-4 py-3 text-[1rem] text-text placeholder:text-text-subtle focus:border-accent-text focus:outline-none aria-[invalid=true]:border-error";

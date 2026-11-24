@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
-/** Apple-style text link: orange label + small chevron that nudges on hover. */
+/** Apple-style text link: gold label + small chevron that nudges on hover. */
 export function ChevronLink({
   className,
   children,

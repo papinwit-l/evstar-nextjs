@@ -35,7 +35,7 @@ export function PortfolioFilters({ filters, active }: PortfolioFiltersProps) {
                 className={cn(
                   "inline-block whitespace-nowrap rounded-full border px-4 py-1.5 text-[0.9rem] transition-colors",
                   selected
-                    ? "border-cta bg-accent-subtle font-medium text-accent-text"
+                    ? "border-accent-text bg-accent-subtle font-medium text-accent-text"
                     : "border-border-strong text-text-muted hover:border-text-muted hover:text-text",
                 )}
               >
